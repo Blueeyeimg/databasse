@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <%@ page language="java"  pageEncoding="UTF-8"%>
-<%--零点零六分提交呵呵不会吧--%>
 <head>
 
     <meta charset="utf-8">
