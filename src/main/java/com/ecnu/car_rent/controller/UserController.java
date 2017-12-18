@@ -2,13 +2,11 @@ package com.ecnu.car_rent.controller;
 
 import com.ecnu.car_rent.model.User;
 import com.ecnu.car_rent.service.UserService;
-import lombok.experimental.var;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -53,7 +51,7 @@ public class UserController {
         //model.addAttribute("User",user1);
         //model.addAttribute("isSuccess",isSuccess);
         model.addAttribute("user",u);
-        return "showUser";
+        return "admin/main_page";
     }
 
 }

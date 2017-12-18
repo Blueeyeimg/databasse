@@ -10,16 +10,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/form-elements.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/login_page/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/login_page/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/login_page/font-awesome/css/form-elements.css">
+    <link rel="stylesheet" href="assets/login_page/css/login_style.css">
 
     <!-- Javascript -->
-    <script src="assets/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.backstretch.min.js" type="text/javascript"></script>
-    <script src="assets/js/scripts.js" type="text/javascript"></script>
+    <script src="assets/login_page/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="assets/login_page/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/login_page/js/jquery.backstretch.min.js" type="text/javascript"></script>
+    <script src="assets/login_page/js/scripts.js" type="text/javascript"></script>
 
 </head>
 
@@ -69,13 +69,13 @@
                     <h3>你还可以这样登录～</h3>
                     <div class="social-login-buttons">
                         <a class="btn" href="#">
-                            <img src="assets/img/images/QQ.png" class="img-circle">
+                            <img src="assets/login_page/img/icon/QQ.png" class="img-circle">
                         </a>
                         <a class="btn" href="#">
-                            <img src="assets/img/images/weixin.png" class="img-circle">
+                            <img src="assets/login_page/img/icon/weixin.png" class="img-circle">
                         </a>
                         <a class="btn" href="#">
-                            <img src="assets/img/images/weibo.png" class="img-circle">
+                            <img src="assets/login_page/img/icon/weibo.png" class="img-circle">
                         </a>
                     </div>
                 </div>
