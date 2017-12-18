@@ -36,15 +36,11 @@ public class UserController {
         return "showUser";
     }
 
-    @RequestMapping("/login")
-    public String login(HttpServletRequest request, Model model){
-        return "login";
-    }
+
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
-        //int isSuccess = userService.insertNewUser(user);//做了一个插入的列子
         User u = userService.getUserById(6);
         //User user1 = userService.getUserById(2);
         //model.addAttribute("userList",userList);
