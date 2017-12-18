@@ -47,13 +47,13 @@ public class UserController {
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
         //int isSuccess = userService.insertNewUser(user);//做了一个插入的列子
-        User u = userService.getUserById(6);
+      //  User u = userService.getUserById(6);
         //User user1 = userService.getUserById(2);
         //model.addAttribute("userList",userList);
         //model.addAttribute("User",user1);
         //model.addAttribute("isSuccess",isSuccess);
-        model.addAttribute("user",u);
-        return "showUser";
+     //   model.addAttribute("user",u);
+        return "userMainPage";
     }
 
 }
