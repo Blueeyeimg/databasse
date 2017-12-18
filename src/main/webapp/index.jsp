@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Login Form Template</title>
+    <title>租车登录页面</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -82,18 +82,7 @@
             </div>
         </div>
     </div>
-
 </div>
-<%--<form action="haha" method="post">
-    用户名：<input name="userName"/>
-    密码：<input name="password"/>
-    <input type="submit" value="注册">
-</form>
-<form action="/showUser" method="post">
-    用户名：<input name="userName"/>
-    密码：<input name="password"/>
-    <input type="submit" value="注册">
-</form>--%>
 </body>
 
 </html>
