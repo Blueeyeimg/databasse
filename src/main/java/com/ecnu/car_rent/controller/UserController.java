@@ -2,13 +2,11 @@ package com.ecnu.car_rent.controller;
 
 import com.ecnu.car_rent.model.User;
 import com.ecnu.car_rent.service.UserService;
-import lombok.experimental.var;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -47,13 +45,13 @@ public class UserController {
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
         //int isSuccess = userService.insertNewUser(user);//做了一个插入的列子
-      //  User u = userService.getUserById(6);
+        User u = userService.getUserById(6);
         //User user1 = userService.getUserById(2);
         //model.addAttribute("userList",userList);
         //model.addAttribute("User",user1);
         //model.addAttribute("isSuccess",isSuccess);
-     //   model.addAttribute("user",u);
-        return "userMainPage";
+        model.addAttribute("user",u);
+        return "admin/main_page";
     }
 
 }
