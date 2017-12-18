@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="haha" method="post" class="login-form">
+                        <form role="form" action="/login" method="post" class="login-form">
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="text" name="userName" placeholder="在此键入您的用户名..." class="form-username form-control" id="form-username">
