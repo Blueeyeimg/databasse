@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     public boolean insertNewUser(User user) {
+        userMapper.insert(user);
         return true;
     }
 
