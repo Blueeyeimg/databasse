@@ -19,11 +19,29 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserMapper userMapper;
 
-    public int insertNewUser(User user){
-       return userMapper.insert(user);
+    public boolean insertNewUser(User user) {
+        return true;
     }
-    
+
+    public boolean deleteUserById(int id) {
+        return true;
+    }
+
+    public boolean deleteUserByName(String name) {
+        return true;
+    }
+    // int deleteAllUsers();
+
+
     public User getUserById(Integer userId) {
-        return userMapper.selectByPrimaryKey(userId);
+        return new User();
+    }
+
+    public User getUserByName(String name) {
+        return new User();
+    }
+
+    public User[] getAllUsers() {
+        return new User[1];
     }
 }
