@@ -19,6 +19,9 @@ public class CarOrderServiceImpl implements CarOrderService {
 //    boolean deleteCarOrderByName(String name);
 //    boolean deleteCarOrderBygetName(String getName);
 //    boolean deleteCarOrderByHasName(String hasName);
+public boolean updateUnfinishedCarOrder(CarOrder order) {
+    return true;
+}
 
     public boolean changeStateToUnfinished(int id) {
         return true;
