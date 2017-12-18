@@ -6,5 +6,6 @@
 </head>
 <body>
 <textarea id="ee"></textarea>
+<a href="mainPage.jsp">a</a>
 </body>
 </html>

@@ -20,13 +20,10 @@ public class UserController {
     @Resource
     private UserService userService;
 
-
     //1,使用HttpServletRequest获取
     // 2,Spring会自动将表单参数注入到方法参数，和表单的name属性保持一致。和Struts2一样------@RequestParam("name")String name
     @RequestMapping("/showUser")
     public String showUser(HttpServletRequest request, Model model,@RequestParam("name")String name,@RequestParam("pass")String password){
-
-        log.info("查询所有用户信息");
  /*     String name = request.getParameter("name");
         log.info("request.getParameter:::::"+name);
 
