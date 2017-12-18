@@ -51,7 +51,7 @@ public class UserController {
         //model.addAttribute("User",user1);
         //model.addAttribute("isSuccess",isSuccess);
         model.addAttribute("user",u);
-        return "admin/main_page";
+        return "user/main_page";
     }
 
 }

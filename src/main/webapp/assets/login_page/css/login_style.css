@@ -145,9 +145,17 @@ img { max-width: 100%; }
 }
 
 .form-bottom form button.btn {
-	width: 100%;
-}
+	width: 95%;
 
+}
+.form-bottom form button.btnsma {
+	width: 45%;
+
+}
+.form-bottom form button.btnsma_reg {
+	width: 45%;
+
+}
 .form-bottom form .input-error {
 	border-color: #4aaf51;
 }
