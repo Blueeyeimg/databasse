@@ -34,8 +34,11 @@
 <body class="flat-blue">
 <div class="app-container">
     <div class="row content-container">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-top"><%--导航栏设置--%>
+
+        <%--导航栏设置--%>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-top">
             <div class="container-fluid">
+
                 <div class="navbar-header">
                     <button type="button" class="navbar-expand-toggle">
                         <i class="fa fa-bars icon"></i>
@@ -47,10 +50,14 @@
                         <i class="fa fa-th icon"></i>
                     </button>
                 </div>
+
+                <%--头部导航栏右侧--%>
                 <ul class="nav navbar-nav navbar-right">
                     <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                         <i class="fa fa-times icon"></i>
                     </button>
+
+                    <%-- 第一个消息下拉框--%>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
                         <ul class="dropdown-menu animated fadeInDown">
@@ -62,6 +69,8 @@
                             </li>
                         </ul>
                     </li>
+
+                   <%-- 第二个消息下拉框--%>
                     <li class="dropdown primary">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
                         <ul class="dropdown-menu danger  animated fadeInDown">
@@ -89,16 +98,18 @@
                             </li>
                         </ul>
                     </li>
+
+                    <%--下拉栏菜单--%>
                     <li class="dropdown profile">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kyw7<span class="caret"></span></a><%--此处插入姓名--%>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user.userName}<span class="caret"></span></a><%--此处插入姓名--%>
                         <ul class="dropdown-menu animated fadeInDown">
                             <li class="profile-img">
                                 <img src="../../assets/main_page/img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
                             </li>
                             <li>
                                 <div class="profile-info">
-                                    <h4 class="username">Kyw7</h4><%--此处插入姓名--%>
-                                    <p>641364175@qq.com</p>
+                                    <h4 class="username">${user.userName}</h4><%--此处插入姓名--%>
+                                    <p>${user.telephone}</p>
                                     <div class="btn-group margin-bottom-2x" role="group">
                                         <button type="button" class="btn btn-default"><i class="fa fa-user"></i>详细资料</button>
                                         <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i>注销</button>
@@ -107,12 +118,13 @@
                             </li>
                         </ul>
                     </li>
+
                 </ul>
             </div>
         </nav>
 
-
-        <div class="side-menu sidebar-inverse"><%--侧边栏设置--%>
+            <%--侧边栏设置--%>
+        <div class="side-menu sidebar-inverse">
             <nav class="navbar navbar-default" role="navigation">
                 <div class="side-menu-container">
                     <div class="navbar-header">
@@ -124,10 +136,11 @@
                             <i class="fa fa-times icon"></i>
                         </button>
                     </div>
+
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="#">
-                                <span class="icon fa fa-tachometer"></span><span class="title"></span>
+                                <span class="icon fa fa-tachometer"></span><span class="title">465</span>
                             </a>
                         </li>
                         <li class="panel panel-default dropdown">
@@ -140,116 +153,10 @@
                                     <ul class="nav navbar-nav">
                                         <li><a href="ui-kits/theming.html">Theming</a>
                                         </li>
-                                        <li><a href="ui-kits/grid.html">Grid</a>
-                                        </li>
-                                        <li><a href="ui-kits/button.html">Buttons</a>
-                                        </li>
-                                        <li><a href="ui-kits/card.html">Cards</a>
-                                        </li>
-                                        <li><a href="ui-kits/list.html">Lists</a>
-                                        </li>
-                                        <li><a href="ui-kits/modal.html">Modals</a>
-                                        </li>
-                                        <li><a href="ui-kits/alert.html">Alerts & Toasts</a>
-                                        </li>
-                                        <li><a href="ui-kits/panel.html">Panels</a>
-                                        </li>
-                                        <li><a href="ui-kits/loader.html">Loaders</a>
-                                        </li>
-                                        <li><a href="ui-kits/step.html">Tabs & Steps</a>
-                                        </li>
-                                        <li><a href="ui-kits/other.html">Other</a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                        </li>
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-table">
-                                <span class="icon fa fa-table"></span><span class="title">Table</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-table" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="table/table.html">Table</a>
-                                        </li>
-                                        <li><a href="table/datatable.html">Datatable</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-form">
-                                <span class="icon fa fa-file-text-o"></span><span class="title">Form</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-form" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="form/ui-kits.html">Form UI Kits</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
 
-                        <!-- Dropdown-->
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#component-example">
-                                <span class="icon fa fa-cubes"></span><span class="title">Components</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="component-example" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="components/pricing-table.html">Pricing Table</a>
-                                        </li>
-                                        <li><a href="components/chartjs.html">Chart.JS</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Dropdown-->
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-example">
-                                <span class="icon fa fa-slack"></span><span class="title">Page Example</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-example" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="pages/login.html">Login</a>
-                                        </li>
-                                        <li><a href="pages/index.html">Landing Page</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Dropdown-->
-                        <li class="panel panel-default dropdown">
-                            <a data-toggle="collapse" href="#dropdown-icon">
-                                <span class="icon fa fa-archive"></span><span class="title">Icons</span>
-                            </a>
-                            <!-- Dropdown level 1 -->
-                            <div id="dropdown-icon" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="icons/glyphicons.html">Glyphicons</a>
-                                        </li>
-                                        <li><a href="icons/font-awesome.html">Font Awesomes</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="license.html">
-                                <span class="icon fa fa-thumbs-o-up"></span><span class="title">License</span>
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -258,14 +165,15 @@
         </div>
 
 
-        <div class="copyrights">免费网站模板</div>
-        <!-- Main Content -->
+        <!-- 网页正式内容 -->
         <div class="container-fluid">
             <div class="side-body padding-top">
                 <div class="row">
+
+                    <%--card展示--%>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
-                            <div class="card red summary-inline">  <%--card展示--%>
+                            <div class="card red summary-inline">
                                 <div class="card-body">
                                     <i class="icon fa fa-inbox fa-4x"></i>
                                     <div class="content">
@@ -277,6 +185,8 @@
                             </div>
                         </a>
                     </div>
+
+                        <%--card展示--%>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card yellow summary-inline">
@@ -291,6 +201,8 @@
                             </div>
                         </a>
                     </div>
+
+                        <%--card展示--%>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card green summary-inline">
@@ -305,6 +217,8 @@
                             </div>
                         </a>
                     </div>
+
+                        <%--card展示--%>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card blue summary-inline">
@@ -319,7 +233,11 @@
                             </div>
                         </a>
                     </div>
+
+
                 </div>
+
+
                 <div class="row  no-margin-bottom">
                     <div class="col-sm-6 col-xs-12">
                         <div class="row">
@@ -398,11 +316,15 @@
             </div>
         </div>
     </div>
+
+    <%--脚部--%>
     <footer class="app-footer">
         <div class="wrapper">
             <span class="pull-right">2.1 <a href="#"><i class="fa fa-long-arrow-up"></i></a></span> © 2017 Copyright. j2ee
         </div>
     </footer>
+
+
     <div>
         <!-- Javascript Libs -->
         <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.min.js"></script>
