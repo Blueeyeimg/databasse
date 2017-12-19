@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
 
     public User getUserById(Integer userId) {
-        return new User();
+        return userMapper.selectByPrimaryKey(userId);
     }
 
     public User getUserByName(String name) {

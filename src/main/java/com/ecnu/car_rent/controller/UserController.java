@@ -1,6 +1,10 @@
 package com.ecnu.car_rent.controller;
 
+import com.ecnu.car_rent.model.CarOrder;
+import com.ecnu.car_rent.model.Massage;
 import com.ecnu.car_rent.model.User;
+import com.ecnu.car_rent.service.CarOrderService;
+import com.ecnu.car_rent.service.MassageService;
 import com.ecnu.car_rent.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -17,6 +22,10 @@ public class UserController {
     private Logger log = Logger.getLogger(UserController.class);
     @Resource
     private UserService userService;
+    @Resource
+    private CarOrderService carOrderService;
+    /*@Resource
+    private MassageService massageService;*/
 
     //1,使用HttpServletRequest获取
     // 2,Spring会自动将表单参数注入到方法参数，和表单的name属性保持一致。和Struts2一样------@RequestParam("name")String name
@@ -36,22 +45,16 @@ public class UserController {
         return "showUser";
     }
 
-    @RequestMapping("/login")
-    public String login(HttpServletRequest request, Model model){
-        return "login";
-    }
+
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
-        //int isSuccess = userService.insertNewUser(user);//做了一个插入的列子
-        User u = userService.getUserById(6);
-        //User user1 = userService.getUserById(2);
-        //model.addAttribute("userList",userList);
-        //model.addAttribute("User",user1);
-        //model.addAttribute("isSuccess",isSuccess);
-        model.addAttribute("user",u);
-        return "user/main_page";
+        User user1 = userService.getUserById(1);//登录成功后获取用户的信息
+        CarOrder[] order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
+        model.addAttribute("user",user1);
+        model.addAttribute("unsolvedoder",order);//测试数组传输是否正确
+        return "user/userMainPage";
     }
 
 }

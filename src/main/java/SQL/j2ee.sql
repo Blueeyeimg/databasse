@@ -1,22 +1,22 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : server666
-Source Server Version : 50718
+Source Server         : first_mysql
+Source Server Version : 50720
 Source Host           : localhost:3306
 Source Database       : j2ee
 
 Target Server Type    : MYSQL
-Target Server Version : 50718
+Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2017-12-18 16:20:33
+Date: 2017-12-18 23:11:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for car_order
+-- Table structure for `car_order`
 -- ----------------------------
 DROP TABLE IF EXISTS `car_order`;
 CREATE TABLE `car_order` (
@@ -29,25 +29,29 @@ CREATE TABLE `car_order` (
   `money` int(11) NOT NULL,
   `car_type` varchar(50) NOT NULL,
   `description` text,
-  PRIMARY KEY (`car_order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`car_order_id`),
+  KEY `has_name_index` (`has_name`) USING BTREE,
+  KEY `get_name_index` (`get_name`) USING BTREE,
+  KEY `state_index` (`state`) USING BTREE,
+  KEY `type_index` (`type`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_order
 -- ----------------------------
-INSERT INTO `car_order` VALUES ('1', '1', '8', '', '0', '2017-12-18 16:08:18.000000', '500', '宝马', '租到就是赚到啦～，宝马汽车跳楼接价出租咯～');
-INSERT INTO `car_order` VALUES ('2', '2', '7', null, '0', '2017-12-18 16:17:01.000000', '2000', '宾利', null);
 
 -- ----------------------------
--- Table structure for massage
+-- Table structure for `massage`
 -- ----------------------------
 DROP TABLE IF EXISTS `massage`;
 CREATE TABLE `massage` (
   `massage_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_order_id` int(11) NOT NULL,
   `sender_name` varchar(50) NOT NULL,
   `text` text NOT NULL,
   `date` datetime(6) NOT NULL,
-  PRIMARY KEY (`massage_id`)
+  PRIMARY KEY (`massage_id`),
+  KEY `car_order_id_index` (`car_order_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -55,7 +59,7 @@ CREATE TABLE `massage` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for news
+-- Table structure for `news`
 -- ----------------------------
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
@@ -63,18 +67,40 @@ CREATE TABLE `news` (
   `title` varchar(50) NOT NULL,
   `text` text NOT NULL,
   `date` datetime(6) NOT NULL,
-  `link` varchar(200) DEFAULT NULL,
+  `link` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`news_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of news
 -- ----------------------------
-INSERT INTO `news` VALUES ('1', '厉害了，这份成绩单真亮眼', '过去五年，中国经济再上新台阶，年均经济增速超过7%，对世界经济增长平均贡献率超过30%；中国经济已由高速增长阶段转向高质量发展阶段。戳图↓↓看中国经济新时代，取得了哪些发展成就', '2017-12-18 00:00:00.000000', 'http://news.ifeng.com/a/20171218/54264684_0.shtml?_zbs_uc_news');
-INSERT INTO `news` VALUES ('2', '中国仅用两年时间破解此国外封锁技术 震惊欧美同行', '社会社会', '2017-12-18 16:06:14.000000', 'http://tech.ifeng.com/a/20171218/44809071_0.shtml?_zbs_uc_news');
 
 -- ----------------------------
--- Table structure for stop_order
+-- Table structure for `schema_version`
+-- ----------------------------
+DROP TABLE IF EXISTS `schema_version`;
+CREATE TABLE `schema_version` (
+  `installed_rank` int(11) NOT NULL,
+  `version` varchar(50) DEFAULT NULL,
+  `description` varchar(200) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `script` varchar(1000) NOT NULL,
+  `checksum` int(11) DEFAULT NULL,
+  `installed_by` varchar(100) NOT NULL,
+  `installed_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `execution_time` int(11) NOT NULL,
+  `success` tinyint(1) NOT NULL,
+  PRIMARY KEY (`installed_rank`),
+  KEY `schema_version_s_idx` (`success`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of schema_version
+-- ----------------------------
+INSERT INTO `schema_version` VALUES ('1', '1', '20171211 ddl.', 'SQL', 'V1__20171211_ddl.sql', '-1630107487', 'root', '2017-12-11 17:14:55', '1571', '1');
+
+-- ----------------------------
+-- Table structure for `stop_order`
 -- ----------------------------
 DROP TABLE IF EXISTS `stop_order`;
 CREATE TABLE `stop_order` (
@@ -83,7 +109,8 @@ CREATE TABLE `stop_order` (
   `money` int(11) NOT NULL,
   `address` varchar(50) NOT NULL,
   `description` text NOT NULL,
-  PRIMARY KEY (`stop_order_id`)
+  PRIMARY KEY (`stop_order_id`),
+  KEY `get_order_index` (`get_name`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -91,21 +118,20 @@ CREATE TABLE `stop_order` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for `user`
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `isadmin` int(11) NOT NULL DEFAULT '0' COMMENT '1:管理员，0：非管理员',
   `user_name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `telephone` varchar(50) DEFAULT NULL,
   `gender` int(11) DEFAULT '1',
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`user_id`),
+  KEY `user_name_index` (`user_name`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('6', '张三', '123', null, '1');
-INSERT INTO `user` VALUES ('7', '李四', '456', '18918073777', '1');
-INSERT INTO `user` VALUES ('8', '韩梅梅', '1234', '18918073778', '0');
