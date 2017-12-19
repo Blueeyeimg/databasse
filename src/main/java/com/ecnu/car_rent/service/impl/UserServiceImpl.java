@@ -50,10 +50,10 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getUserByName(String name) {
-        return new User();
+        return userMapper.selectUserByName(name);
     }
 
     public List<User> getAllUsers() {
-        return userMapper.getAllUsers();
+        return userMapper.selectAllUsers();
     }
 }

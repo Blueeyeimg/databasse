@@ -52,6 +52,67 @@
     -->
     description
   </sql>
+
+  <select id="getCarOrderByGetName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from car_order
+    where get_name = #{getName,jdbcType=VARCHAR}
+    ORDER BY car_order_id DESC
+  </select>
+  <select id="getCarOrderByHasName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from car_order
+    where has_name = #{hasName,jdbcType=VARCHAR}
+    ORDER BY car_order_id DESC
+  </select>
+  <select id="getCarOrderByName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from car_order
+    where get_name = #{name,jdbcType=VARCHAR} OR has_name = #{name,jdbcType=VARCHAR}
+    ORDER BY car_order_id DESC
+  </select>
+  <select id="getCarOrdersByState" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from car_order
+    where state = #{state,jdbcType=INTEGER}
+    ORDER BY car_order_id DESC
+  </select>
+  <select id="getAllCarOrders" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from car_order
+    ORDER BY car_order_id DESC
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated

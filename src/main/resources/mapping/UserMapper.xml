@@ -24,6 +24,7 @@
     -->
     user_id, isadmin, user_name, password, telephone, gender
   </sql>
+
     <delete id="deleteByUserName" parameterType="java.lang.String">
         <!--
           倪事通
@@ -31,7 +32,7 @@
         delete from user
         where user_name = #{userName,jdbcType=VARCHAR}
     </delete>
-    <select id="getUserByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+  <select id="selectUserByName" resultMap="BaseResultMap" parameterType="java.lang.String">
         <!--
           倪事通
         -->
@@ -40,7 +41,7 @@
         from user
         where user_name = #{userName,jdbcType=VARCHAR}
     </select>
-    <select id="getAllUsers" resultMap="BaseResultMap">
+  <select id="selectAllUsers" resultMap="BaseResultMap">
         <!--
           倪事通
         -->
@@ -49,6 +50,7 @@
         from user
         ORDER BY user_id DESC
     </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated
