@@ -3,6 +3,8 @@ package com.ecnu.car_rent.service.impl;
 import com.ecnu.car_rent.model.StopOrder;
 import com.ecnu.car_rent.service.StopOrderServicce;
 
+import java.util.List;
+
 public class StopOrderServicceImpl implements StopOrderServicce {
 
     public boolean addNewStopOrder(StopOrder order) {
@@ -29,8 +31,21 @@ public class StopOrderServicceImpl implements StopOrderServicce {
         return new StopOrder();
     }
 
-    public StopOrder[] getStopOrderByGetName(String getName) {
-        return new StopOrder[1];
+    public List<StopOrder> getStopOrderByGetName(String getName) {
+        return null;
     }
+
+    public List<StopOrder> getAllUnfinishedStopOrderByGetName() {
+        return null;
+    }
+
+    public List<StopOrder> getAllFinishedStopOrderByGetName() {
+        return null;
+    }
+
+    public List<StopOrder> getAllStopOrderByGetName() {
+        return null;
+    }
+
 
 }

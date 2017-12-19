@@ -2,6 +2,8 @@ package com.ecnu.car_rent.service;
 
 import com.ecnu.car_rent.model.CarOrder;
 
+import java.util.List;
+
 
 public interface CarOrderService {
 
@@ -12,7 +14,7 @@ public interface CarOrderService {
 //    boolean deleteCarOrderByName(String name);
 //    boolean deleteCarOrderBygetName(String getName);
 //    boolean deleteCarOrderByHasName(String hasName)；
-boolean updateUnfinishedCarOrder(CarOrder order);//order里面有id，由此id更新原订单
+boolean updateUnfinishedCarOrder(CarOrder order);//用户想修改，order里面有id，由此id更新原订单，用户想修改
 
     boolean changeStateToUnfinished(int id);//state: 0:待审核，1:未完成，2:已完成,此处表示管理员审核后由待审核状态改为未完成
 
@@ -23,15 +25,15 @@ boolean updateUnfinishedCarOrder(CarOrder order);//order里面有id，由此id�
 
     CarOrder getCarOrderById(int id);
 
-    CarOrder[] getCarOrderByGetName(String getName);//按id逆序
+    List<CarOrder> getCarOrderByGetName(String getName);//按id逆序
 
-    CarOrder[] getCarOrderByHasName(String hasName);//按id逆序
+    List<CarOrder> getCarOrderByHasName(String hasName);//按id逆序
 
-    CarOrder[] getCarOrderByname(String name);//按id逆序
+    List<CarOrder> getCarOrderByname(String name);//按id逆序
 
-    CarOrder[] getCarOrdersByState(int state);//按id逆序
+    List<CarOrder> getCarOrdersByState(int state);//按id逆序
 
-    CarOrder[] getAllCarOrders();//按id逆序
+    List<CarOrder> getAllCarOrders();//按id逆序
 
 
 }

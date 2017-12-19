@@ -3,6 +3,8 @@ package com.ecnu.car_rent.service.impl;
 import com.ecnu.car_rent.model.Massage;
 import com.ecnu.car_rent.service.MassageService;
 
+import java.util.List;
+
 public class MassageServiceImpl implements MassageService {
 
     public boolean addMassage(Massage massage) {
@@ -12,13 +14,17 @@ public class MassageServiceImpl implements MassageService {
     public boolean deleteMassageById(int id) {
         return true;
     }
+
+    public Massage getMassagesById(int id) {
+        return null;
+    }
 //    boolean deleteAllMassages();
 
-    public Massage[] getAllMassagesByCarOrderId(int id) {
-        return new Massage[1];
+    public List<Massage> getAllMassagesByCarOrderId(int id) {
+        return null;
     }
 
-    public Massage[] getAllMassages() {
-        return new Massage[1];
+    public List<Massage> getAllMassages() {
+        return null;
     }
 }

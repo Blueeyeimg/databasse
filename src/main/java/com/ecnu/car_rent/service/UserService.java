@@ -2,6 +2,8 @@ package com.ecnu.car_rent.service;
 
 import com.ecnu.car_rent.model.User;
 
+import java.util.List;
+
 /**
  * Created by Zhangxq on 2016/7/15.
  */
@@ -20,5 +22,5 @@ public interface UserService {
 
     User getUserByName(String name);
 
-    User[] getAllUsers();//获得所有用户
+    List<User> getAllUsers();//获得所有用户
 }

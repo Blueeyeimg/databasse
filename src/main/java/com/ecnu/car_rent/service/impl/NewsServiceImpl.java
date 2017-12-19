@@ -3,6 +3,8 @@ package com.ecnu.car_rent.service.impl;
 import com.ecnu.car_rent.model.News;
 import com.ecnu.car_rent.service.NewsService;
 
+import java.util.List;
+
 public class NewsServiceImpl implements NewsService {
     public boolean addNews(News news) {
         return true;
@@ -20,8 +22,9 @@ public class NewsServiceImpl implements NewsService {
         return new News();
     }
 
-    public News[] getAllNews() {
-        return new News[1];
+    public List<News> getAllNews() {
+        return null;
     }
+
 
 }

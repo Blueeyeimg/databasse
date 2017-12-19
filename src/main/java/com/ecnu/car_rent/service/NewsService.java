@@ -2,6 +2,8 @@ package com.ecnu.car_rent.service;
 
 import com.ecnu.car_rent.model.News;
 
+import java.util.List;
+
 public interface NewsService {
 
     boolean addNews(News news);
@@ -12,5 +14,5 @@ public interface NewsService {
 
     News getNewsById(int id);
 
-    News[] getAllNews();
+    List<News> getAllNews();
 }

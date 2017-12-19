@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by Zhangxq on 2016/7/15.
@@ -20,16 +21,26 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     public boolean insertNewUser(User user) {
-        userMapper.insert(user);
-        return true;
+        if (userMapper.insertSelective(user) != 0)
+            return true;
+        else
+            return false;
+
     }
 
     public boolean deleteUserById(int id) {
-        return true;
+        if (userMapper.deleteByPrimaryKey(id) != 0)
+            return true;
+        else
+            return false;
+
     }
 
     public boolean deleteUserByName(String name) {
-        return true;
+        if (userMapper.deleteByUserName(name) != 0)
+            return true;
+        else
+            return false;
     }
     // int deleteAllUsers();
 
@@ -39,10 +50,10 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getUserByName(String name) {
-        return new User();
+        return userMapper.selectUserByName(name);
     }
 
-    public User[] getAllUsers() {
-        return new User[1];
+    public List<User> getAllUsers() {
+        return userMapper.selectAllUsers();
     }
 }

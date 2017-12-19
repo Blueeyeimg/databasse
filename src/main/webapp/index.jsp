@@ -59,9 +59,9 @@
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="userPwd" placeholder="在此键入您的密码..." class="form-password form-control" id="form-password">
                             </div>
-                            <button type="submit" class="btn" name="login_in_as_user">登录</button>
-                            <button type="submit" class="btnsma_reg" name="register">注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>
-                            <button type="submit" class="btnsma" name="login_in_as_admin">管理员登录</button>
+                            <button type="submit" class="btn" name="action" value="lgoin_as_user">登录</button>
+                            <button type="submit" class="btnsma_reg" name="action" value="register">注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>
+                            <button type="submit" class="btnsma" name="action" value="login_as_admin">管理员登录</button>
                         </form>
                     </div>
                 </div>

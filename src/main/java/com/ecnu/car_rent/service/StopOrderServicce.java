@@ -2,6 +2,8 @@ package com.ecnu.car_rent.service;
 
 import com.ecnu.car_rent.model.StopOrder;
 
+import java.util.List;
+
 public interface StopOrderServicce {
 
     boolean addNewStopOrder(StopOrder order);//初始getName为空，状态由getName是否为空判断未完成/已完成
@@ -18,6 +20,12 @@ public interface StopOrderServicce {
 
     StopOrder getStopOrderById(int id);
 
-    StopOrder[] getStopOrderByGetName(String getName);//按id逆序
+    List<StopOrder> getStopOrderByGetName(String getName);//按id逆序
+
+    List<StopOrder> getAllUnfinishedStopOrderByGetName();
+
+    List<StopOrder> getAllFinishedStopOrderByGetName();
+
+    List<StopOrder> getAllStopOrderByGetName();
 
 }
