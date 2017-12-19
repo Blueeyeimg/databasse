@@ -170,7 +170,7 @@
             <div class="side-body padding-top">
                 <div class="row">
 
-                    <%--card展示--%>
+                  <%--
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card red summary-inline">
@@ -186,7 +186,7 @@
                         </a>
                     </div>
 
-                        <%--card展示--%>
+
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card yellow summary-inline">
@@ -202,7 +202,7 @@
                         </a>
                     </div>
 
-                        <%--card展示--%>
+
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card green summary-inline">
@@ -218,7 +218,7 @@
                         </a>
                     </div>
 
-                        <%--card展示--%>
+
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card blue summary-inline">
@@ -235,29 +235,45 @@
                     </div>
 
 
-                </div>
+                </div>   --%>
 
 
-                <div class="row  no-margin-bottom">
+          <%--      <div class="row  no-margin-bottom">
                     <div class="col-sm-6 col-xs-12">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-12 col-sm-12">
                                 <div class="thumbnail no-margin-bottom">
-                                    <img src="../../assets/main_page/img/thumbnails/picjumbo.com_IMG_4566.jpg" class="img-responsive">
+                                    <img src="../../assets/main_page/img/thumbnails/hehe.jpg" class="img-responsive">
                                     <div class="caption">
                                         <p>${user.userName}</p>
-                                        <h3 id="thumbnail-label2">出租豪车${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                        <h3 id="thumbnail-label1">租车${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
                                         <p><a href="#" class="btn btn-primary" role="button">去看看</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xs-12">
+                            --%>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="thumbnail no-margin-bottom">
+                                    <img src="../../assets/main_page/img/thumbnails/62854687_p0.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <p>${user.userName}</p>
+                                        <h3 id="thumbnail-label2">租出${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                        <p><a href="#" class="btn btn-primary" role="button">去看看</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12">
                         <div class="card card-success">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <div class="title"><i class="fa fa-comments-o"></i> Last Message</div>
+                                    <div class="title"><a href="" ><i class="fa fa-comments-o"></i>出租信息</a></div> //这里应该达到刷新的效果，需要ajex
                                 </div>
                                 <div class="clear-both"></div>
                             </div>
@@ -303,15 +319,77 @@
                                             </div>
                                         </li>
                                     </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
                                     <a href="#" id="message-load-more">
                                         <li class="text-center load-more">
-                                            <i class="fa fa-refresh"></i> load more..
+                                            <i class="fa fa-refresh"></i> next  //这里需要换页，同样需要ajex
                                         </li>
                                     </a>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -341,6 +419,7 @@
         <!-- Javascript -->
         <script type="text/javascript" src="../../assets/main_page/js/app.js"></script>
         <script type="text/javascript" src="../../assets/main_page/js/index.js"></script>
+    </div>
 </body>
 
 </html>

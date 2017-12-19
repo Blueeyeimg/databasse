@@ -54,6 +54,8 @@ public class UserController {
         CarOrder[] order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
         model.addAttribute("user",user1);
         model.addAttribute("unsolvedoder",order);//测试数组传输是否正确
+
+
         return "user/userMainPage";
     }
 
