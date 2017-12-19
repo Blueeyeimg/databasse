@@ -1,6 +1,5 @@
 package com.ecnu.car_rent.controller;
 
-import com.ecnu.car_rent.model.User;
 import com.ecnu.car_rent.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

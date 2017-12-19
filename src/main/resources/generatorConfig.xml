@@ -7,7 +7,7 @@
     <properties resource="jdbc.properties"></properties>
 
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
-    <classPathEntry location="/home/kyw/Downloads/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar"/>
+    <classPathEntry location="/home/kyw/Downloads/56mysql-connector-java-5.1.45-bin.jar"/>
 
     <context id="default" targetRuntime="MyBatis3">
 
