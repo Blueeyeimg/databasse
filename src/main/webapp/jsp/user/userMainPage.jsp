@@ -379,6 +379,7 @@
                                             </div>
                                         </li>
                                     </a>
+
                                     <a href="#" id="message-load-more">
                                         <li class="text-center load-more">
                                             <i class="fa fa-refresh"></i> next  //这里需要换页，同样需要ajex
