@@ -2,6 +2,8 @@ package com.ecnu.car_rent.service;
 
 import com.ecnu.car_rent.model.CarOrder;
 
+import java.util.List;
+
 
 public interface CarOrderService {
 
@@ -23,15 +25,21 @@ boolean updateUnfinishedCarOrder(CarOrder order);//order里面有id，由此id�
 
     CarOrder getCarOrderById(int id);
 
-    CarOrder[] getCarOrderByGetName(String getName);//按id逆序
+    List<CarOrder> getCarOrderByGetName(String getName);//按id逆序
 
-    CarOrder[] getCarOrderByHasName(String hasName);//按id逆序
+    List<CarOrder> getCarOrderByHasName(String hasName);//按id逆序
 
-    CarOrder[] getCarOrderByname(String name);//按id逆序
+    List<CarOrder> getCarOrderByname(String name);//按id逆序
 
-    CarOrder[] getCarOrdersByState(int state);//按id逆序
+    List<CarOrder> getCarOrdersByState(int state);//按id逆序
 
-    CarOrder[] getAllCarOrders();//按id逆序
+    List<CarOrder> getAllUncheckCarOrders();//按id逆序
+
+    List<CarOrder> getAllUnfinishedCarOrders();//按id逆序
+
+    List<CarOrder> getAllFinishedCarOrders();//按id逆序
+
+    List<CarOrder> getAllCarOrders();//按id逆序
 
 
 }

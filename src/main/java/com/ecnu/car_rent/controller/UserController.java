@@ -51,7 +51,7 @@ public class UserController {
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
         User user1 = userService.getUserById(1);//登录成功后获取用户的信息
-        CarOrder[] order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
+        List<CarOrder> order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
         model.addAttribute("user",user1);
         model.addAttribute("unsolvedoder",order);//测试数组传输是否正确
         return "user/userMainPage";

@@ -5,6 +5,8 @@ import com.ecnu.car_rent.service.CarOrderService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class CarOrderServiceImpl implements CarOrderService {
@@ -39,23 +41,35 @@ public boolean updateUnfinishedCarOrder(CarOrder order) {
         return new CarOrder();
     }
 
-    public CarOrder[] getCarOrderByGetName(String getName) {
-        return new CarOrder[1];
+    public List<CarOrder> getCarOrderByGetName(String getName) {
+        return null;
     }
 
-    public CarOrder[] getCarOrderByHasName(String hasName) {
-        return new CarOrder[1];
+    public List<CarOrder> getCarOrderByHasName(String hasName) {
+        return null;
     }
 
-    public CarOrder[] getCarOrderByname(String name) {
-        return new CarOrder[1];
+    public List<CarOrder> getCarOrderByname(String name) {
+        return null;
     }
 
-    public CarOrder[] getCarOrdersByState(int state) {
-        return new CarOrder[1];
+    public List<CarOrder> getCarOrdersByState(int state) {
+        return null;
     }
 
-    public CarOrder[] getAllCarOrders() {
-        return new CarOrder[1];
+    public List<CarOrder> getAllUncheckCarOrders() {
+        return null;
+    }
+
+    public List<CarOrder> getAllUnfinishedCarOrders() {
+        return null;
+    }
+
+    public List<CarOrder> getAllFinishedCarOrders() {
+        return null;
+    }
+
+    public List<CarOrder> getAllCarOrders() {
+        return null;
     }
 }
