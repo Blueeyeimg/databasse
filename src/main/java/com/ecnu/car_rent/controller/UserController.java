@@ -49,11 +49,20 @@ public class UserController {
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
     @RequestMapping("/haha")
-    public String showUserssss(HttpServletRequest request, Model model,User user){
+    public String showUserssss(HttpServletRequest request, Model model,User user,@RequestParam String action){
         User user1 = userService.getUserById(1);//登录成功后获取用户的信息
         List<CarOrder> order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
         model.addAttribute("user",user1);
         model.addAttribute("unsolvedoder",order);//测试数组传输是否正确
+
+
+
+        if(action.equals("login_as_admin")){
+             return "admin/adminMainPage";//返回管理员界面
+        }
+        if(action.equals("login_as_user")){
+            return "user/userMainPage";
+        }
         return "user/userMainPage";
     }
 

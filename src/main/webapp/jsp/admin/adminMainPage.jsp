@@ -27,6 +27,7 @@
     <!-- CSS App -->
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/main_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/themes/flat-blue.css">
+    <title>admin</title>
 </head>
 
 <body class="flat-blue">
