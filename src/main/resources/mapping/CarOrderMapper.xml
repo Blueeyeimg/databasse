@@ -53,7 +53,7 @@
     description
   </sql>
 
-  <select id="getCarOrderByGetName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+  <select id="selectCarOrderByGetName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
     <!--
       倪事通
     -->
@@ -65,7 +65,7 @@
     where get_name = #{getName,jdbcType=VARCHAR}
     ORDER BY car_order_id DESC
   </select>
-  <select id="getCarOrderByHasName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+  <select id="selectCarOrderByHasName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
     <!--
       倪事通
     -->
@@ -77,7 +77,7 @@
     where has_name = #{hasName,jdbcType=VARCHAR}
     ORDER BY car_order_id DESC
   </select>
-  <select id="getCarOrderByName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+  <select id="selectCarOrderByName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
     <!--
       倪事通
     -->
@@ -89,7 +89,7 @@
     where get_name = #{name,jdbcType=VARCHAR} OR has_name = #{name,jdbcType=VARCHAR}
     ORDER BY car_order_id DESC
   </select>
-  <select id="getCarOrdersByState" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+  <select id="selectCarOrdersByState" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
     <!--
       倪事通
     -->
@@ -101,7 +101,7 @@
     where state = #{state,jdbcType=INTEGER}
     ORDER BY car_order_id DESC
   </select>
-  <select id="getAllCarOrders" resultMap="ResultMapWithBLOBs">
+  <select id="selectAllCarOrders" resultMap="ResultMapWithBLOBs">
     <!--
       倪事通
     -->

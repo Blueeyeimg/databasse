@@ -53,7 +53,7 @@ public class UserController {
         User user1 = userService.getUserById(1);//登录成功后获取用户的信息
         List<CarOrder> order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
         model.addAttribute("user",user1);
-        model.addAttribute("unsolvedoder",order);//测试数组传输是否正确
+        model.addAttribute("unsolveorder", order);//测试数组传输是否正确
 
 
 

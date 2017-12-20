@@ -102,15 +102,15 @@
                     <%--下拉栏菜单--%>
                     <li class="dropdown profile">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-expanded="false">${user1.get(1).userName}<span class="caret"></span></a><%--此处插入姓名--%>
+                           aria-expanded="false">${user.userName}<span class="caret"></span></a><%--此处插入姓名--%>
                         <ul class="dropdown-menu animated fadeInDown">
                             <li class="profile-img">
                                 <img src="../../assets/main_page/img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
                             </li>
                             <li>
                                 <div class="profile-info">
-                                    <h4 class="username">${order1.getName}</h4><%--此处插入姓名--%>
-                                    <p>${order1.hasName}</p>
+                                    <h4 class="username">${unsolveorder.get(0).getName}</h4><%--此处插入姓名--%>
+                                    <p>${unsolveorder.get(0).hasName}</p>
                                     <div class="btn-group margin-bottom-2x" role="group">
                                         <button type="button" class="btn btn-default"><i class="fa fa-user"></i>详细资料</button>
                                         <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i>注销</button>
