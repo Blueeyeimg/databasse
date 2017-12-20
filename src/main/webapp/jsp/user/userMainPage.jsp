@@ -28,10 +28,11 @@
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/lib/css/select2.min.css">
     <!-- CSS App -->
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/themes/flat-green.css">
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/themes/flat-blue.css">
 </head>
 
-<body class="flat-blue">
+<body id="html_theme" class="flat-blue">  <%--主题改变--%>
 <div class="app-container">
     <div class="row content-container">
 
@@ -99,6 +100,7 @@
                         </ul>
                     </li>
 
+
                     <%--下拉栏菜单--%>
                     <li class="dropdown profile">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -139,11 +141,11 @@
                     </div>
 
                     <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">
-                                <span class="icon fa fa-tachometer"></span><span class="title">465</span>
-                            </a>
-                        </li>
+                        <%--<li class="active">--%>
+                            <%--<a href="#">--%>
+                                <%--<span class="icon fa fa-tachometer"></span><span class="title">465</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element">
                                 <span class="icon fa fa-desktop"></span><span class="title">UI Kits</span>
@@ -152,7 +154,7 @@
                             <div id="dropdown-element" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="ui-kits/theming.html">Theming</a>
+                                        <li><a onclick="change_css()">change</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -274,12 +276,15 @@
                         <div class="card card-success">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <div class="title"><a href="" ><i class="fa fa-comments-o"></i>出租信息</a></div> //这里应该达到刷新的效果，需要ajex
+                                    <div class="title"><p onclick="a()"><i class="fa fa-comments-o"></i>出租信息</p></div> <%--//这里应该达到刷新的效果，需要ajax--%>
                                 </div>
                                 <div class="clear-both"></div>
                             </div>
                             <div class="card-body no-padding">
                                 <ul class="message-list">
+                                    <%
+                                        for (int i = 0; i < 10; i++) {
+                                    %>
                                     <a href="#">
                                         <li>
                                             <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
@@ -290,104 +295,16 @@
                                             </div>
                                         </li>
                                     </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">15 min ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">2 hour ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                    <a href="#">
-                                        <li>
-                                            <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
-                                            <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
-                                                </div>
-                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
-                                            </div>
-                                        </li>
-                                    </a>
-
+                                    <%
+                                            }
+                                    %>
                                     <a href="#" id="message-load-more">
                                         <li class="text-center load-more">
-                                            <i class="fa fa-refresh"></i> next  //这里需要换页，同样需要ajex
+                                            <i class="fa fa-refresh"></i> next  <%--//这里需要换页，同样需要ajex--%>
 
                                         </li>
                                     </a>
-                                </ul>
+                                <%--</ul>--%>
                             </div>
                         </div>
                     </div>
@@ -423,6 +340,21 @@
         <script type="text/javascript" src="../../assets/main_page/js/app.js"></script>
         <script type="text/javascript" src="../../assets/main_page/js/index.js"></script>
     </div>
+    <script>
+        function a() {
+            alert(123)
+        }
+        var theme="green";
+        function change_css(){
+            if(theme=="green"){
+                document.getElementById("html_theme").setAttribute("class","flat-blue");
+                theme="blue";
+            }else{
+                document.getElementById("html_theme").setAttribute("class","flat-green");
+                theme="green";
+            }
+        }       <%--更改主题--%>
+    </script>
 </body>
 
 </html>
