@@ -34,37 +34,53 @@ public class CarOrderServiceImpl implements CarOrderService {
 //    boolean deleteCarOrderByHasName(String hasName);
 
     public boolean updateUnfinishedCarOrder(CarOrder order) {
-        if (carOrderMapper.updateByPrimaryKey(order) != 0) {
-            return true;
+        if (order.getState() == 0) {
+            if (carOrderMapper.updateByPrimaryKeySelective(order) != 0) {
+                return true;
+            } else
+                return false;
         } else
             return false;
+
 
     }
 
     public boolean changeStateToUnfinished(int id) {
         CarOrder order = carOrderMapper.selectByPrimaryKey(id);
-        order.setType(1);
-        return updateUnfinishedCarOrder(order);
+        if (order.getState() == 0) {
+            order.setState(1);
+            if (carOrderMapper.updateByPrimaryKey(order) != 0) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
 
-    public boolean changeStateToFinished(int id) {
-        CarOrder order = carOrderMapper.selectByPrimaryKey(id);
-        order.setType(2);
-        return updateUnfinishedCarOrder(order);
+    public boolean changeStateToFinished(CarOrder order) {
+        if (order.getState() == 1) {
+            order.setState(2);
+            if (carOrderMapper.updateByPrimaryKey(order) != 0) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
+
     }
 
     public int changeNameToInvalid(String name) {
-        List<CarOrder> hasOrders = getCarOrderByHasName(name);
+        List<CarOrder> hasOrders = getCarOrdersByHasName(name);
         int i, j;
         for (i = 0; i < hasOrders.size(); i++) {
             CarOrder order = hasOrders.get(i);
             order.setHasName(order.getHasName() + "(Invalid)");
             carOrderMapper.updateByPrimaryKey(order);
         }
-        List<CarOrder> getOrders = getCarOrderByGetName(name);
+        List<CarOrder> getOrders = getCarOrdersByGetName(name);
         for (j = 0; j < getOrders.size(); j++) {
-            CarOrder order = getOrders.get(i);
-            order.setHasName(order.getGetName() + "(Invalid)");
+            CarOrder order = getOrders.get(j);
+            order.setGetName(order.getGetName() + "(Invalid)");
             carOrderMapper.updateByPrimaryKey(order);
         }
         return i + j;
@@ -74,20 +90,25 @@ public class CarOrderServiceImpl implements CarOrderService {
         return carOrderMapper.selectByPrimaryKey(id);
     }
 
-    public List<CarOrder> getCarOrderByGetName(String getName) {
-        return carOrderMapper.selectCarOrderByGetName(getName);
+    public List<CarOrder> getCarOrdersByGetName(String getName) {
+        return carOrderMapper.selectCarOrdersByGetName(getName);
     }
 
-    public List<CarOrder> getCarOrderByHasName(String hasName) {
-        return carOrderMapper.selectCarOrderByHasName(hasName);
+    public List<CarOrder> getCarOrdersByHasName(String hasName) {
+        return carOrderMapper.selectCarOrdersByHasName(hasName);
     }
 
-    public List<CarOrder> getCarOrderByname(String name) {
-        return carOrderMapper.selectCarOrderByName(name);
+    public List<CarOrder> getCarOrdersByName(String name) {
+        return carOrderMapper.selectCarOrdersByName(name);
     }
 
     public List<CarOrder> getCarOrdersByState(int state) {
         return carOrderMapper.selectCarOrdersByState(state);
+    }
+
+    @Override
+    public List<CarOrder> getCarOrdersByType(int type) {
+        return carOrderMapper.seleteCarOrdersByType(type);
     }
 
     public List<CarOrder> getAllCarOrders() {

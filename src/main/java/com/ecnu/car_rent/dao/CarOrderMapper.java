@@ -6,13 +6,15 @@ import java.util.List;
 
 public interface CarOrderMapper {
 
-    List<CarOrder> selectCarOrderByGetName(String getName);//按id逆序
+    List<CarOrder> selectCarOrdersByGetName(String getName);//按id逆序
 
-    List<CarOrder> selectCarOrderByHasName(String hasName);//按id逆序
+    List<CarOrder> selectCarOrdersByHasName(String hasName);//按id逆序
 
-    List<CarOrder> selectCarOrderByName(String name);//按id逆序
+    List<CarOrder> selectCarOrdersByName(String name);//按id逆序
 
     List<CarOrder> selectCarOrdersByState(int state);//按id逆序
+
+    List<CarOrder> seleteCarOrdersByType(int type);//按id逆序
 
     List<CarOrder> selectAllCarOrders();//按id逆序
 

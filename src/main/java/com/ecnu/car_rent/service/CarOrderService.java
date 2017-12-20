@@ -18,20 +18,22 @@ boolean updateUnfinishedCarOrder(CarOrder order);//用户想修改，order里面
 
     boolean changeStateToUnfinished(int id);//state: 0:待审核，1:未完成，2:已完成,此处表示管理员审核后由待审核状态改为未完成
 
-    boolean changeStateToFinished(int id);
+    boolean changeStateToFinished(CarOrder order);
 
     int changeNameToInvalid(String name);//将订单中包含的已经删除的用户名后面添加字符串"（无效）"字段
 
 
     CarOrder getCarOrderById(int id);
 
-    List<CarOrder> getCarOrderByGetName(String getName);//按id逆序
+    List<CarOrder> getCarOrdersByGetName(String getName);//按id逆序
 
-    List<CarOrder> getCarOrderByHasName(String hasName);//按id逆序
+    List<CarOrder> getCarOrdersByHasName(String hasName);//按id逆序
 
-    List<CarOrder> getCarOrderByname(String name);//按id逆序
+    List<CarOrder> getCarOrdersByName(String name);//按id逆序
 
     List<CarOrder> getCarOrdersByState(int state);//按id逆序
+
+    List<CarOrder> getCarOrdersByType(int type);//按id逆序
 
     List<CarOrder> getAllCarOrders();//按id逆序
 
