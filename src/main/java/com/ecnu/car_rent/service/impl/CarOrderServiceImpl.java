@@ -6,11 +6,13 @@ import com.ecnu.car_rent.service.CarOrderService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class CarOrderServiceImpl implements CarOrderService {
+    @Resource
     private CarOrderMapper carOrderMapper;
 
     public boolean addNewCarOrder(CarOrder order) {
@@ -81,7 +83,7 @@ public class CarOrderServiceImpl implements CarOrderService {
     }
 
     public List<CarOrder> getCarOrderByname(String name) {
-        return carOrderMapper.selectCarOrderByname(name);
+        return carOrderMapper.selectCarOrderByName(name);
     }
 
     public List<CarOrder> getCarOrdersByState(int state) {

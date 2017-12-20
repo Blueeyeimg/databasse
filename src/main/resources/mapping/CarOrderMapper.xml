@@ -101,7 +101,7 @@
     where state = #{state,jdbcType=INTEGER}
     ORDER BY car_order_id DESC
   </select>
-  <select id="getAllCarOrders" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+  <select id="getAllCarOrders" resultMap="ResultMapWithBLOBs">
     <!--
       倪事通
     -->

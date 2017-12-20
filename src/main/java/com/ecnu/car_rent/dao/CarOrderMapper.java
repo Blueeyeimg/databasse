@@ -10,7 +10,7 @@ public interface CarOrderMapper {
 
     List<CarOrder> selectCarOrderByHasName(String hasName);//按id逆序
 
-    List<CarOrder> selectCarOrderByname(String name);//按id逆序
+    List<CarOrder> selectCarOrderByName(String name);//按id逆序
 
     List<CarOrder> selectCarOrdersByState(int state);//按id逆序
 

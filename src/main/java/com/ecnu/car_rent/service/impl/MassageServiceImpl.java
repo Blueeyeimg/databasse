@@ -1,11 +1,15 @@
 package com.ecnu.car_rent.service.impl;
 
+import com.ecnu.car_rent.dao.MassageMapper;
 import com.ecnu.car_rent.model.Massage;
 import com.ecnu.car_rent.service.MassageService;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 public class MassageServiceImpl implements MassageService {
+    @Resource
+    private MassageMapper massageMapper;
 
     public boolean addMassage(Massage massage) {
         return true;

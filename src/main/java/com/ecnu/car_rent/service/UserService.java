@@ -22,5 +22,5 @@ public interface UserService {
 
     User getUserByName(String name);
 
-    List<User> getAllUsers();//获得所有用户
+    List<User> getAllUsers();//获得所有用户,按ID正序
 }

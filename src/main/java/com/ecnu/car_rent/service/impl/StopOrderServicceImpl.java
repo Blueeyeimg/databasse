@@ -1,11 +1,15 @@
 package com.ecnu.car_rent.service.impl;
 
+import com.ecnu.car_rent.dao.StopOrderMapper;
 import com.ecnu.car_rent.model.StopOrder;
 import com.ecnu.car_rent.service.StopOrderServicce;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 public class StopOrderServicceImpl implements StopOrderServicce {
+    @Resource
+    private StopOrderMapper stopOrderMapper;
 
     public boolean addNewStopOrder(StopOrder order) {
         return true;

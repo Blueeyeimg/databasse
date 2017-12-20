@@ -25,7 +25,7 @@
     user_id, isadmin, user_name, password, telephone, gender
   </sql>
 
-    <delete id="deleteByUserName" parameterType="java.lang.String">
+  <delete id="deleteByUserName" parameterType="java.lang.String">
         <!--
           倪事通
         -->
@@ -48,7 +48,7 @@
         select
         <include refid="Base_Column_List"/>
         from user
-        ORDER BY user_id DESC
+    ORDER BY user_id
     </select>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
