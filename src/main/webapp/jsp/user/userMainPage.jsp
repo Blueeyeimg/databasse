@@ -30,6 +30,22 @@
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/main_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/themes/flat-green.css">
     <link rel="stylesheet" type="text/css" href="../../assets/main_page/css/themes/flat-blue.css">
+
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/Chart.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/ace/ace.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/ace/mode-html.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/lib/js/ace/theme-github.js"></script>
+    <!-- Javascript -->
+    <script type="text/javascript" src="../../assets/main_page/js/app.js"></script>
+    <script type="text/javascript" src="../../assets/main_page/js/index.js"></script>
 </head>
 
 <body id="html_theme" class="flat-blue">  <%--主题改变--%>
@@ -111,7 +127,7 @@
                             </li>
                             <li>
                                 <div class="profile-info">
-                                    <h4 class="username">${unsolveorder.get(0).getName}</h4><%--此处插入姓名--%>
+                                    <h4 class="username">${unsolveorder.get(0).hasName}</h4>
                                     <p>${unsolveorder.get(0).hasName}</p>
                                     <div class="btn-group margin-bottom-2x" role="group">
                                         <button type="button" class="btn btn-default"><i class="fa fa-user"></i>详细资料</button>
@@ -159,8 +175,8 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </li>
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -276,7 +292,7 @@
                         <div class="card card-success">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <div class="title"><p onclick="a()"><i class="fa fa-comments-o"></i>出租信息</p></div> <%--//这里应该达到刷新的效果，需要ajax--%>
+                                    <div class="title"><p ><i class="fa fa-comments-o"></i>出租信息</p></div> <%--//这里应该达到刷新的效果，需要ajax--%>
                                 </div>
                                 <div class="clear-both"></div>
                             </div>
@@ -298,13 +314,27 @@
                                     <%
                                             }
                                     %>
-                                    <a href="#" id="message-load-more">
-                                        <li class="text-center load-more">
-                                            <i class="fa fa-refresh"></i> next  <%--//这里需要换页，同样需要ajex--%>
 
+                                    <a onclick="a()" id="message-load-more-left" class="col-sm-4 col-xs-12">
+                                        <li class="text-center load-more">
+                                            <i class="fa fa-arrow-left"></i> <%--//这里需要换页，同样需要ajex--%>
                                         </li>
                                     </a>
-                                <%--</ul>--%>
+                                    <a onclick=alert("Fd") id="message-load-re" class="col-sm-4 col-xs-12">
+                                        <li class="text-center load-more">
+                                            <i class="fa fa-refresh"></i>  <%--//这里需要换页，同样需要ajex--%>
+                                        </li>
+                                    </a>
+                                    <a onclick=alert("Fd") id="message-load-more-right" class="col-sm-4 col-xs-12">
+                                        <li class="text-center load-more">
+                                            <i class="fa fa-arrow-right"></i> <%--//这里需要换页，同样需要ajex--%>
+                                        </li>
+                                    </a>
+
+
+
+
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -315,31 +345,11 @@
         </div>
     </div>
 
-    <%--脚部--%>
-    <footer class="app-footer">
-        <div class="wrapper">
-            <span class="pull-right">2.1 <a href="#"><i class="fa fa-long-arrow-up"></i></a></span> © 2017 Copyright. j2ee
-        </div>
-    </footer>
 
 
-    <div>
-        <!-- Javascript Libs -->
-        <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/Chart.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/bootstrap-switch.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.matchHeight-min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/dataTables.bootstrap.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/select2.full.min.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/ace/ace.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/ace/mode-html.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/lib/js/ace/theme-github.js"></script>
-        <!-- Javascript -->
-        <script type="text/javascript" src="../../assets/main_page/js/app.js"></script>
-        <script type="text/javascript" src="../../assets/main_page/js/index.js"></script>
-    </div>
+
+
+
     <script>
         function a() {
             alert(123)
