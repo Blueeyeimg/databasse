@@ -44,6 +44,31 @@
     -->
     text
   </sql>
+
+  <select id="selectAllMassagesByCarOrderId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from massage
+    where car_order_id = #{id,jdbcType=INTEGER}
+    ORDER BY massage_id
+  </select>
+  <select id="selectAllMassages" resultMap="ResultMapWithBLOBs">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from massage
+    ORDER BY massage_id
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated

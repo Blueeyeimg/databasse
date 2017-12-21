@@ -44,6 +44,55 @@
     -->
     description
   </sql>
+
+  <select id="selectAllFinishedStopOrdersByGetName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from stop_order
+    where get_name = #{getName,jdbcType=VARCHAR}
+    ORDER BY stop_order_id DESC
+  </select>
+  <select id="selectAllUnfinishedStopOrders" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from stop_order
+    where get_name = #{emptyString,jdbcType=VARCHAR}
+    ORDER BY stop_order_id DESC
+  </select>
+  <select id="selectAllFinishedStopOrders" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from stop_order
+    where get_name != #{emptyString,jdbcType=VARCHAR}
+    ORDER BY stop_order_id DESC
+  </select>
+  <select id="selectAllStopOrders" resultMap="ResultMapWithBLOBs">
+    <!--
+      倪事通
+    -->
+    select
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    from stop_order
+    ORDER BY stop_order_id DESC
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated

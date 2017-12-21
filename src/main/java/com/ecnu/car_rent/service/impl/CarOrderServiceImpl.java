@@ -16,10 +16,15 @@ public class CarOrderServiceImpl implements CarOrderService {
     private CarOrderMapper carOrderMapper;
 
     public boolean addNewCarOrder(CarOrder order) {
-        if (carOrderMapper.insertSelective(order) != 0) {
-            return true;
-        } else
+        if (order.getCarOrderId() != null || order.getType() == null || order.getDate() == null || order.getCarType() == null || order.getMoney() == null)
             return false;
+        else {
+            if (carOrderMapper.insertSelective(order) != 0) {
+                return true;
+            } else
+                return false;
+        }
+
     }
 
     public boolean deleteCarOrderById(int id) {

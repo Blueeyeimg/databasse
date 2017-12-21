@@ -3,53 +3,81 @@ package com.ecnu.car_rent.service.impl;
 import com.ecnu.car_rent.dao.StopOrderMapper;
 import com.ecnu.car_rent.model.StopOrder;
 import com.ecnu.car_rent.service.StopOrderServicce;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Service
+@Transactional(rollbackFor = Exception.class)
 public class StopOrderServicceImpl implements StopOrderServicce {
     @Resource
     private StopOrderMapper stopOrderMapper;
 
+
+    @Override
     public boolean addNewStopOrder(StopOrder order) {
-        return true;
+        order.setGetName("");
+        if (order.getStopOrderId() != null || order.getAddress() == null || order.getMoney() == null || order.getDescription() == null)
+            return false;
+        else {
+            if (stopOrderMapper.insertSelective(order) != 0) {
+                return true;
+            } else
+                return false;
+        }
+
     }
 
-
-    public boolean deleteStopOrderById() {
-        return true;
+    @Override
+    public boolean deleteStopOrderById(int id) {
+        if (stopOrderMapper.deleteByPrimaryKey(id) != 0) {
+            return true;
+        } else
+            return false;
     }
 
-
+    @Override
     public boolean updateStopOrder(StopOrder order) {
-        return true;
+        if (stopOrderMapper.updateByPrimaryKeySelective(order) != 0) {
+            return true;
+        } else
+            return false;
     }
 
-
-    public boolean changeStateToFinished(String getName) {
-        return true;
+    @Override
+    public boolean changeStateToFinishedById(StopOrder order) {
+        if (order.getGetName() != null && order.getGetName() != "") {
+            return updateStopOrder(order);
+        } else
+            return false;
     }
 
-
+    @Override
     public StopOrder getStopOrderById(int id) {
-        return new StopOrder();
+        return stopOrderMapper.selectByPrimaryKey(id);
     }
 
-    public List<StopOrder> getStopOrderByGetName(String getName) {
-        return null;
+    @Override
+    public List<StopOrder> getAllFinishedStopOrdersByGetName(String getName) {
+        return stopOrderMapper.selectAllFinishedStopOrdersByGetName(getName);
     }
 
-    public List<StopOrder> getAllUnfinishedStopOrderByGetName() {
-        return null;
+    @Override
+    public List<StopOrder> getAllUnfinishedStopOrders() {
+        String emptyString = "";
+        return stopOrderMapper.selectAllUnfinishedStopOrders(emptyString);
     }
 
-    public List<StopOrder> getAllFinishedStopOrderByGetName() {
-        return null;
+    @Override
+    public List<StopOrder> getAllFinishedStopOrders() {
+        String emptyString = "";
+        return stopOrderMapper.selectAllFinishedStopOrders(emptyString);
     }
 
-    public List<StopOrder> getAllStopOrderByGetName() {
-        return null;
+    @Override
+    public List<StopOrder> getAllStopOrders() {
+        return stopOrderMapper.selectAllStopOrders();
     }
-
-
 }

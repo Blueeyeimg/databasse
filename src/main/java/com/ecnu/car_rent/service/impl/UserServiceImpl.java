@@ -25,14 +25,17 @@ public class UserServiceImpl implements UserService {
     private CarOrderMapper carOrderMapper;
 
     public boolean addNewUser(User user) {
-        if (userMapper.selectUserByName(user.getUserName()) == null) {
-            if (userMapper.insertSelective(user) != 0)
-                return true;
-            else
+        if (user.getUserId() != null || user.getIsadmin() == null || user.getUserName() == null || user.getPassword() == null)
+            return false;
+        else {
+            if (userMapper.selectUserByName(user.getUserName()) == null) {
+                if (userMapper.insertSelective(user) != 0)
+                    return true;
+                else
+                    return false;
+            } else
                 return false;
         }
-        else
-            return false;
 
     }
 
