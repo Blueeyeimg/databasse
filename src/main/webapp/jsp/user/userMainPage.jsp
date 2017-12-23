@@ -306,7 +306,7 @@
                                         <li>
                                             <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
                                             <div class="message-block">
-                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">12 min ago</span>
+                                                <div><span class="username" id = "in"+<%=i%>>${unsolveorder.get(0).getName}</span> <span class="message-datetime">12 min ago</span>
                                                 </div>
                                                 <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
                                             </div>
@@ -462,7 +462,7 @@
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-default" data-dismiss="modal">还是不租了
                                       </button>
-                                      <button type="button" class="btn btn-primary" >
+                                      <button type="button" class="btn btn-primary"  >
                                           提交
                                       </button>
                                   </div>
