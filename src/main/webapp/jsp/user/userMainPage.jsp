@@ -252,27 +252,8 @@
                             </div>
                         </a>
                     </div>
-
-
                 </div>   --%>
 
-
-          <%--      <div class="row  no-margin-bottom">
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="thumbnail no-margin-bottom">
-                                    <img src="../../assets/main_page/img/thumbnails/hehe.jpg" class="img-responsive">
-                                    <div class="caption">
-                                        <p>${user.userName}</p>
-                                        <h3 id="thumbnail-label1">租车${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
-                                        <p><a href="#" class="btn btn-primary" role="button">去看看</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                            --%>
                     <div class="col-sm-4 col-xs-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
@@ -315,6 +296,13 @@
                                     <%
                                             }
                                     %>
+                                   <%-- <% String username ="root";
+                                        String password = "root";
+                                        try{
+                                             Connection connection =
+                                              DriverManager.getConnection(url, username, password);
+                                        }catch(SQLException ex){
+                                        }  %>--%>
 
 
 
@@ -356,7 +344,7 @@
                                                         <%--<p>车型：<input type="text" id="type"></p>--%>
                                                     <%--</from>--%>
 
-                                                        <form class="form-horizontal" role="form">
+                                                        <form class="form-horizontal" role="form" action="/hehe">
                                                             <div class="form-group">
                                                                 <label for="car_name1" class="col-sm-2 control-label">车名</label>
                                                                 <div class="col-sm-10">
@@ -378,6 +366,9 @@
                                                                            placeholder="请输入类型">
                                                                 </div>
                                                             </div>
+                                                            <button type="submit" class="btn btn-primary">
+                                                                提交
+                                                            </button>
                                                         </form>
 
                                                 </div>
@@ -407,7 +398,7 @@
                                       <img src="../../assets/main_page/img/thumbnails/62854687_p0.jpg" class="img-responsive">
                                       <div class="caption">
                                           <p>${user.userName}</p>
-                                          <h3 id="thumbnail-label3">租出${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                          <h3 id="thumbnail-label3">租出<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
                                           <p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal2">去看看</a></p>
                                       </div>
                                   </div>
@@ -423,7 +414,7 @@
                                           &times;
                                       </button>
                                       <h4 class="modal-title" id="myModalLabel2">
-                                          请填写您希望的车的相关信息
+                                          请填写您希望租到的车的相关信息
                                       </h4>
                                   </div>
                                   <div class="modal-body">
@@ -432,38 +423,37 @@
                                           <%--<p>价格：<input type="text" id="money2"></p>--%>
                                           <%--<p>车型：<input type="text" id="type2"></p>--%>
                                       <%--</from>--%>
-                                          <form class="form-horizontal" role="form">
+                                          <form class="form-horizontal" role="form" action="hehe">
                                               <div class="form-group">
-                                                  <label for="car_name2" class="col-sm-2 control-label">车名</label>
+                                                  <label for="car_name2" class="col-sm-2 control-label">车类</label>
                                                   <div class="col-sm-10">
                                                       <input type="text" class="form-control" id="car_name2"
-                                                             placeholder="请输入车名">
+                                                        name="type"     placeholder="请输入车类">
                                                   </div>
 
                                               </div>
                                               <div class="form-group">
-                                                  <label for="car_price2" class="col-sm-2 control-label">价格</label>
+                                                  <label for="car_price2" class="col-sm-2 control-label">月租金</label>
                                                   <div class="col-sm-10">
                                                       <input type="text" class="form-control" id="car_price2"
-                                                             placeholder="请输入价格">
+                                                          name="carType"   placeholder="请输入月租金">
                                                   </div>
                                               </div>
                                               <div class="form-group">
-                                                  <label for="car_type2" class="col-sm-2 control-label">车型</label>
+                                                  <label for="car_type2" class="col-sm-2 control-label">车的描述</label>
                                                   <div class="col-sm-10">
-                                                      <input type="text" class="form-control" id="car_type2"
-                                                             placeholder="请输入类型">
+                                                      <input type="textarea" class="form-control" id="car_type2"
+                                                           name="money"  placeholder="请输入车的描述">
                                                   </div>
                                               </div>
+
+                                              <button type="submit" class="btn btn-primary"  >
+                                                  提交
+                                              </button>
                                           </form>
-
-
                                   </div>
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-default" data-dismiss="modal">还是不租了
-                                      </button>
-                                      <button type="button" class="btn btn-primary"  >
-                                          提交
                                       </button>
                                   </div>
                               </div><!-- /.modal-content -->
