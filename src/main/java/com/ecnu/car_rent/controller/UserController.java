@@ -63,6 +63,7 @@ public class UserController {
 
 
         return "user/userMainPage";
+
     }
     @RequestMapping("/login")
     @ResponseBody
