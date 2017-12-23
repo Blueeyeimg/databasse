@@ -21,6 +21,36 @@
     <script src="assets/login_page/js/jquery.backstretch.min.js" type="text/javascript"></script>
     <script src="assets/login_page/js/scripts.js" type="text/javascript"></script>
 
+    <script>
+        $().ready(
+            function() {
+                $("#login").click(
+                    function () {
+                        var params = {
+                            "userName": $("#userName").val(),
+                            "password": $("#password").val(),
+                            "isadmin" : 0, //userId 应与User类中属性名一致 12为传回去的查询值，可以通过输入框获取值传入
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: "login",//访问路径
+                            dataType: "json",
+                            contentType: "application/json;charset=utf-8",
+                            data: JSON.stringify(params),
+                            error: function (response) {
+                                $("#info").text(response);
+                            },
+                            success: function (response) {
+                                $("#info").text(response);
+                            }//查询成功处理函数
+                        });
+
+
+                    })
+            })
+        //查询成功处理函数
+    </script>
+
 </head>
 
 <body>
@@ -50,19 +80,22 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="haha" method="post" class="login-form">
+                        <div role="form"  method="post" class="login-form">
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
-                                <input type="text" name="userName" placeholder="在此键入您的用户名..." class="form-username form-control" id="form-username">
+                                <input type="text" id="userName" name="userName" placeholder="在此键入您的用户名..." class="form-username form-control" id="form-username">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
-                                <input type="password" name="userPwd" placeholder="在此键入您的密码..." class="form-password form-control" id="form-password">
+                                <input type="password" id="password" name="userPwd" placeholder="在此键入您的密码..." class="form-password form-control" id="form-password">
                             </div>
-                            <button type="submit" class="btn" name="action" value="lgoin_as_user">登录</button>
-                            <button type="submit" class="btnsma_reg" name="action" value="register">注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>
-                            <button type="submit" class="btnsma" name="action" value="login_as_admin">管理员登录</button>
-                        </form>
+                            <div>
+                                <a id="info">f</a>
+                            </div>
+                            <button type="submit" class="btn" id="login" >登录</button>
+                            <button type="submit" class="btnsma_reg" >注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>
+                            <button type="submit" class="btnsma" >管理员登录</button>
+                        </div>
                     </div>
                 </div>
             </div>
