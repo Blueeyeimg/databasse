@@ -281,7 +281,7 @@
                                     <div class="caption">
                                         <p>${user.userName}</p>
                                         <h3 id="thumbnail-label2">租出${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
-                                        <p><a href="#" class="btn btn-primary" role="button">去看看</a></p>
+                                        <p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal">去看看</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                         <div class="card card-success">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <div class="title"><p ><i class="fa fa-comments-o"></i>出租信息</p></div> <%--//这里应该达到刷新的效果，需要ajax--%>
+                                    <div class="title"><p ><i class="fa fa-comments-o"></i>新闻</p></div> <%--//这里应该达到刷新的效果，需要ajax--%>
                                 </div>
                                 <div class="clear-both"></div>
                             </div>
@@ -301,6 +301,7 @@
                                     <%
                                         for (int i = 0; i < 10; i++) {
                                     %>
+
                                     <a href="#">
                                         <li>
                                             <img src="../../assets/main_page/img/profile/profile-1.jpg" class="profile-img pull-left">
@@ -314,6 +315,9 @@
                                     <%
                                             }
                                     %>
+
+
+
 
                                     <a onclick="a()" id="message-load-more-left" class="col-sm-4 col-xs-12">
                                         <li class="text-center load-more">
@@ -334,17 +338,93 @@
 
 
 
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                        &times;
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">
+                                                        请填写您的车的相关信息
+                                                    </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <from id="form_car_provider" class="form-group">
+                                                        <p>车名：<input type="text" id="name"></p>
+                                                        <p>价格：<input type="text" id="money"></p>
+                                                        <p>车型：<input type="text" id="type"></p>
+                                                    </from>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">还是不出租了
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary">
+                                                        提交
+                                                    </button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal -->
+                                    </div>
+
+
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+                      <div class="col-sm-4 col-xs-12">
+                          <div class="row">
+                              <div class="col-md-12 col-sm-12">
+                                  <div class="thumbnail no-margin-bottom">
+                                      <img src="../../assets/main_page/img/thumbnails/62854687_p0.jpg" class="img-responsive">
+                                      <div class="caption">
+                                          <p>${user.userName}</p>
+                                          <h3 id="thumbnail-label3">租出${user.password}<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                          <p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#myModal2">去看看</a></p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                          &times;
+                                      </button>
+                                      <h4 class="modal-title" id="myModalLabel2">
+                                          请填写您的车的相关信息
+                                      </h4>
+                                  </div>
+                                  <div class="modal-body">
+                                      <from id="form_car_get" class="form-group">
+                                          <p>车名：<input type="text" id="name2"></p>
+                                          <p>价格：<input type="text" id="money2"></p>
+                                          <p>车型：<input type="text" id="type2"></p>
+                                      </from>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">还是不租了
+                                      </button>
+                                      <button type="button" class="btn btn-primary">
+                                          提交
+                                      </button>
+                                  </div>
+                              </div><!-- /.modal-content -->
+                          </div><!-- /.modal -->
+                      </div>
 
 
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 
 
 
@@ -363,8 +443,13 @@
                 document.getElementById("html_theme").setAttribute("class","flat-green");
                 theme="green";
             }
-        }       <%--更改主题--%>
+        }
+        function change_news(){
+
+        }
+        <%--更改主题--%>
     </script>
+
 </body>
 
 </html>
