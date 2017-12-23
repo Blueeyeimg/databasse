@@ -299,7 +299,7 @@
                             <div class="card-body no-padding">
                                 <ul class="message-list">
                                     <%
-                                        for (int i = 0; i < 10; i++) {
+                                        for (int i = 0; i < 5; i++) {
                                     %>
 
                                     <a href="#">
@@ -462,7 +462,7 @@
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-default" data-dismiss="modal">还是不租了
                                       </button>
-                                      <button type="button" class="btn btn-primary">
+                                      <button type="button" class="btn btn-primary" >
                                           提交
                                       </button>
                                   </div>
