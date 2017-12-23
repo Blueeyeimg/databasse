@@ -24,32 +24,38 @@
     <script>
         $().ready(
             function() {
-                $("#login").click(
-                    function () {
+                $("#login").click(function () {
                         var params = {
                             "userName": $("#userName").val(),
                             "password": $("#password").val(),
                             "isadmin" : 0, //userId 应与User类中属性名一致 12为传回去的查询值，可以通过输入框获取值传入
                         };
                         $.ajax({
-                            type: "POST",
-                            url: "login",//访问路径
-                            dataType: "json",
+                            type: "POST",//数据提交方式
+                            url: "login",//访问路径，
+                            async : "true",//异步刷新
+                            dataType: "Json",//后台返回的数据类型
                             contentType: "application/json;charset=utf-8",
                             data: JSON.stringify(params),
-                            error: function (response) {
-                                $("#info").text(response);
-                            },
-                            success: function (response) {
-                                $("#info").text(response);
+                            success: function (data) {
+                                var msg = "success";
+                                if(msg === data.result){
+                                    $("#info").text("密码duile");
+                                    window.location.href="haha";
+                                }else
+                                    $("#info").text("密码错误");
+                            },//失败执行的函数
+                            error: function (data) {
+                                /*window.location.href="wrong";*/
+                                console.log(data);
                             }//查询成功处理函数
                         });
-
-
                     })
+
             })
         //查询成功处理函数
     </script>
+
 
 </head>
 
@@ -94,7 +100,7 @@
                             </div>
                             <button type="submit" class="btn" id="login" >登录</button>
                             <button type="submit" class="btnsma_reg" >注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>
-                            <button type="submit" class="btnsma" >管理员登录</button>
+                            <button type="submit" class="btnsma" id="adminLogin">管理员登录</button>
                         </div>
                     </div>
                 </div>
