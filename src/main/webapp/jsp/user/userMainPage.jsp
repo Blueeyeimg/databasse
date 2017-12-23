@@ -350,11 +350,36 @@
                                                     </h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <from id="form_car_provider" class="form-group">
-                                                        <p>车名：<input type="text" id="name"></p>
-                                                        <p>价格：<input type="text" id="money"></p>
-                                                        <p>车型：<input type="text" id="type"></p>
-                                                    </from>
+                                                    <%--<from id="form_car_provider" class="form-group">--%>
+                                                        <%--<p>车名：<input type="text" id="name"></p>--%>
+                                                        <%--<p>价格：<input type="text" id="money"></p>--%>
+                                                        <%--<p>车型：<input type="text" id="type"></p>--%>
+                                                    <%--</from>--%>
+
+                                                        <form class="form-horizontal" role="form">
+                                                            <div class="form-group">
+                                                                <label for="car_name1" class="col-sm-2 control-label">车名</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="car_name1"
+                                                                           placeholder="请输入车名">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="car_price1" class="col-sm-2 control-label">价格</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="car_price1"
+                                                                           placeholder="请输入价格">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="car_type1" class="col-sm-2 control-label">车型</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="car_type1"
+                                                                           placeholder="请输入类型">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">还是不出租了
@@ -398,15 +423,41 @@
                                           &times;
                                       </button>
                                       <h4 class="modal-title" id="myModalLabel2">
-                                          请填写您的车的相关信息
+                                          请填写您希望的车的相关信息
                                       </h4>
                                   </div>
                                   <div class="modal-body">
-                                      <from id="form_car_get" class="form-group">
-                                          <p>车名：<input type="text" id="name2"></p>
-                                          <p>价格：<input type="text" id="money2"></p>
-                                          <p>车型：<input type="text" id="type2"></p>
-                                      </from>
+                                      <%--<from id="form_car_get" class="form-group">--%>
+                                          <%--<p>车名：<input type="text" id="name2"></p>--%>
+                                          <%--<p>价格：<input type="text" id="money2"></p>--%>
+                                          <%--<p>车型：<input type="text" id="type2"></p>--%>
+                                      <%--</from>--%>
+                                          <form class="form-horizontal" role="form">
+                                              <div class="form-group">
+                                                  <label for="car_name2" class="col-sm-2 control-label">车名</label>
+                                                  <div class="col-sm-10">
+                                                      <input type="text" class="form-control" id="car_name2"
+                                                             placeholder="请输入车名">
+                                                  </div>
+
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="car_price2" class="col-sm-2 control-label">价格</label>
+                                                  <div class="col-sm-10">
+                                                      <input type="text" class="form-control" id="car_price2"
+                                                             placeholder="请输入价格">
+                                                  </div>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="car_type2" class="col-sm-2 control-label">车型</label>
+                                                  <div class="col-sm-10">
+                                                      <input type="text" class="form-control" id="car_type2"
+                                                             placeholder="请输入类型">
+                                                  </div>
+                                              </div>
+                                          </form>
+
+
                                   </div>
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-default" data-dismiss="modal">还是不租了
