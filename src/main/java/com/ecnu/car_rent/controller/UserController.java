@@ -1,12 +1,8 @@
 package com.ecnu.car_rent.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.ecnu.car_rent.model.CarOrder;
-import com.ecnu.car_rent.model.Massage;
-import com.ecnu.car_rent.model.User;
-import com.ecnu.car_rent.service.CarOrderService;
-import com.ecnu.car_rent.service.MassageService;
-import com.ecnu.car_rent.service.UserService;
+import com.ecnu.car_rent.model.*;
+import com.ecnu.car_rent.service.*;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -30,8 +26,12 @@ public class UserController {
     private UserService userService;
     @Resource
     private CarOrderService carOrderService;
-    /*@Resource
-    private MassageService massageService;*/
+    @Resource
+    private NewsService newsService;
+    @Resource
+    private MassageService massageService;
+    @Resource
+    private StopOrderService stopOrderService;
 
     //1,使用HttpServletRequest获取
     // 2,Spring会自动将表单参数注入到方法参数，和表单的name属性保持一致。和Struts2一样------@RequestParam("name")String name
@@ -51,15 +51,38 @@ public class UserController {
         return "showUser";
     }*/
 
+    @RequestMapping("/he")
+    public void deleteUser(HttpServletRequest request, Model model, User user) {
+
+        userService.deleteUserById(user.getUserId());
+    }
+
 
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
     @RequestMapping("/haha")
     public String showUserssss(HttpServletRequest request, Model model,User user){
-        User user1 = userService.getUserById(1);//登录成功后获取用户的信息
-        List<CarOrder> order = carOrderService.getAllCarOrders();//获取所有的未完成订单，包括出租和租入
-        model.addAttribute("user",user1);
-        model.addAttribute("unsolveorder", order);//测试数组传输是否正确
+
+        List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
+        List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
+        List<CarOrder> finishedCarOrders = carOrderService.getCarOrdersByState(2);
+
+
+        List<StopOrder> unfinishedStopOrders = stopOrderService.getAllUnfinishedStopOrders();
+        List<StopOrder> finishedStopOrders = stopOrderService.getAllFinishedStopOrders();
+
+        List<News> news = newsService.getAllNews();
+
+        List<User> users = userService.getAllUsers();
+
+        model.addAttribute("user", user);
+        model.addAttribute("users", users);
+        model.addAttribute("news", news);
+        model.addAttribute("unfinishedStopOrders", unfinishedStopOrders);
+        model.addAttribute("finishedStopOrders", finishedStopOrders);
+        model.addAttribute("unsolvedCarOrders", unsolvedCarOrders);
+        model.addAttribute("unfinishedCarOrders", unfinishedCarOrders);
+        model.addAttribute("finishedCarOrders", finishedCarOrders);
 
 
         return "user/userMainPage";
