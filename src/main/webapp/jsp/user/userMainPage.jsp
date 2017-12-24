@@ -88,7 +88,7 @@
                         </ul>
                     </li>
 
-                   <%-- 第二个消息下拉框--%>
+                    <%-- 第二个消息下拉框--%>
                     <li class="dropdown primary">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
@@ -184,7 +184,7 @@
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-2">
                                 <span class="icon fa fa-automobile"></span><span class="title">车辆订单</span>
-                                </a>
+                            </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-2" class="panel-collapse collapse">
                                 <div class="panel-body">
@@ -1236,7 +1236,6 @@
                         </div><!-- /.modal -->
                     </div>
 
-
                 </div>
             </div>
         </div>
@@ -1244,100 +1243,100 @@
 </div>
 
 
+<script>
+    function unsolved_car() {
+        document.getElementById("car_order_1").style.display = "";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function unfinished_car() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function finished_car() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function user() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function unfinished_stop() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function finished_stop() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "";
+        document.getElementById("news").style.display = "none";
+    }
+
+    function news() {
+        document.getElementById("car_order_1").style.display = "none";
+        document.getElementById("car_order_2").style.display = "none";
+        document.getElementById("car_order_3").style.display = "none";
+        document.getElementById("user").style.display = "none";
+        document.getElementById("stop_order_1").style.display = "none";
+        document.getElementById("stop_order_2").style.display = "none";
+        document.getElementById("news").style.display = "";
+    }
 
 
+    function a() {
+        alert(123)
+    }
 
-    <script>
-        function unsolved_car() {
-            document.getElementById("car_order_1").style.display = "";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "none";
+    var theme = "green";
+
+    function change_css() {
+        if (theme == "green") {
+            document.getElementById("html_theme").setAttribute("class", "flat-blue");
+            theme = "blue";
+        } else {
+            document.getElementById("html_theme").setAttribute("class", "flat-green");
+            theme = "green";
         }
+    }
 
-        function unfinished_car() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "none";
-        }
+    function change_news() {
 
-        function finished_car() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "none";
-        }
+    }
 
-        function user() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "none";
-        }
-
-        function unfinished_stop() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "none";
-        }
-
-        function finished_stop() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "";
-            document.getElementById("news").style.display = "none";
-        }
-
-        function news() {
-            document.getElementById("car_order_1").style.display = "none";
-            document.getElementById("car_order_2").style.display = "none";
-            document.getElementById("car_order_3").style.display = "none";
-            document.getElementById("user").style.display = "none";
-            document.getElementById("stop_order_1").style.display = "none";
-            document.getElementById("stop_order_2").style.display = "none";
-            document.getElementById("news").style.display = "";
-        }
-
-
-        function a() {
-            alert(123)
-        }
-        var theme="green";
-        function change_css(){
-            if(theme=="green"){
-                document.getElementById("html_theme").setAttribute("class","flat-blue");
-                theme="blue";
-            }else{
-                document.getElementById("html_theme").setAttribute("class","flat-green");
-                theme="green";
-            }
-        }
-
-        function change_news() {
-
-        }
-        <%--更改主题--%>
-    </script>
+    <%--更改主题--%>
+</script>
 
 </body>
 

@@ -76,7 +76,8 @@
 
                     <%-- 第一个消息下拉框--%>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"><i class="fa fa-comments-o"></i></a>
                         <ul class="dropdown-menu animated fadeInDown">
                             <li class="title">
                                 提醒 <span class="badge pull-right">5</span><%--这里需要设置从后天拿数据过来--%>
@@ -89,7 +90,8 @@
 
                     <%-- 第二个消息下拉框--%>
                     <li class="dropdown primary">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
                         <ul class="dropdown-menu danger  animated fadeInDown">
                             <li class="title">
                                 提醒 <span class="badge pull-right">4</span>
@@ -167,7 +169,7 @@
                         <%--</li>--%>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-1">
-                                <span class="icon fa fa-automobile"></span><span class="title">待审核</span>
+                                <span class="icon fa fa-edit"></span><span class="title">待审核</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-1" class="panel-collapse collapse">
@@ -183,7 +185,7 @@
 
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-2">
-                                <span class="icon fa fa-desktop"></span><span class="title">车辆订单</span>
+                                <span class="icon fa fa-automobile"></span><span class="title">车辆订单</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-2" class="panel-collapse collapse">
@@ -202,7 +204,7 @@
 
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-3">
-                                <span class="icon fa fa-desktop"></span><span class="title">用户</span>
+                                <span class="icon fa fa-user"></span><span class="title">用户</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-3" class="panel-collapse collapse">
@@ -217,7 +219,7 @@
 
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-4">
-                                <span class="icon fa fa-desktop"></span><span class="title">车位订单</span>
+                                <span class="icon fa fa-circle"></span><span class="title">车位订单</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-4" class="panel-collapse collapse">
@@ -236,7 +238,7 @@
 
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element-5">
-                                <span class="icon fa fa-desktop"></span><span class="title">新闻</span>
+                                <span class="icon fa fa-hacker-news"></span><span class="title">新闻</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element-5" class="panel-collapse collapse">
@@ -348,8 +350,7 @@
                                       --%>
 
                     <div class="col-sm-12 col-md-9" id="car_order_1">
-                        <div class="sub-title">待审核<span class="description">( .active , .success , .info , .warning , .danger )</span>
-                        </div>
+                        <div class="sub-title">待审核</div>
                         <table class="table">
                             <thead>
                             <tr>
@@ -603,7 +604,7 @@
                                 <td>${users.get(0).telephone}</td>
                                 <td>
                                     <button type="button" class="btn btn-default" data-toggle="modal"
-                                            data-target="#myModal2">
+                                            data-target="#myModal21">
                                         删除
                                     </button>
                                 </td>
@@ -621,6 +622,12 @@
                                 <td>${users.get(2).isadmin}</td>
                                 <td>${users.get(2).gender}</td>
                                 <td>${users.get(2).telephone}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal23">
+                                        删除
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${users.get(3).userId}</th>
@@ -1209,20 +1216,21 @@
                        </div>--%>
 
 
-                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
-                         aria-hidden="true">
+                        <div class="modal fade" id="myModal21" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel2"
+                             aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                         &times;
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel2">
+                                    <h4 class="modal-title" id="myModalLabel21">
                                         警告
                                     </h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal" role="form" action="he">
+                                    <form class="form-horizontal" role="form" action="deleteUser">
                                         <input name="userId" hidden="hidden" value="${users.get(0).userId}"/>
                                         <button type="submit" class="btn btn-primary">
                                             确认删除
@@ -1236,6 +1244,35 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal -->
                     </div>
+
+                        <div class="modal fade" id="myModal23" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel2"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel23">
+                                            警告
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="deleteUser">
+                                            <input name="userId" hidden="hidden" value="${users.get(2).userId}"/>
+                                            <button type="submit" class="btn btn-primary">
+                                                确认删除
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
 
 
                 </div>
@@ -1336,7 +1373,6 @@
     function change_news() {
 
     }
-
     <%--更改主题--%>
 </script>
 

@@ -22,13 +22,46 @@
     <script src="assets/login_page/js/scripts.js" type="text/javascript"></script>
 
     <script>
+
+        $().ready(
+            function () {
+                $("#login").click(function () {
+                    var params = {
+                        "userName": $("#userName").val(),
+                        "password": $("#password").val(),
+                        "isadmin": 0, //userId 应与User类中属性名一致 12为传回去的查询值，可以通过输入框获取值传入
+                    };
+                    $.ajax({
+                        type: "POST",//数据提交方式
+                        url: "login",//访问路径，
+                        async: "true",//异步刷新
+                        dataType: "Json",//后台返回的数据类型
+                        contentType: "application/json;charset=utf-8",
+                        data: JSON.stringify(params),
+                        success: function (data) {
+                            var msg = "success";
+                            if (msg === data.result) {
+                                $("#info").text("密码正确，登录中...");
+                                window.location.href = "my_login";
+                            } else
+                                $("#info").text("密码错误");
+                        },//失败执行的函数
+                        error: function (data) {
+                            /*window.location.href="wrong";*/
+                            console.log(data);
+                        }//查询成功处理函数
+                    });
+                })
+
+            })
+
         $().ready(
             function() {
-                $("#login").click(function () {
+                $("#adminLogin").click(function () {
                         var params = {
                             "userName": $("#userName").val(),
                             "password": $("#password").val(),
-                            "isadmin" : 0, //userId 应与User类中属性名一致 12为传回去的查询值，可以通过输入框获取值传入
+                            "isadmin": 1, //userId 应与User类中属性名一致 12为传回去的查询值，可以通过输入框获取值传入
                         };
                         $.ajax({
                             type: "POST",//数据提交方式
@@ -40,8 +73,8 @@
                             success: function (data) {
                                 var msg = "success";
                                 if(msg === data.result){
-                                    $("#info").text("密码duile");
-                                    window.location.href="haha";
+                                    $("#info").text("密码正确，登录中...");
+                                    window.location.href = "admin_login";
                                 }else
                                     $("#info").text("密码错误");
                             },//失败执行的函数

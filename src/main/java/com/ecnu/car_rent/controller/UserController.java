@@ -51,17 +51,44 @@ public class UserController {
         return "showUser";
     }*/
 
-    @RequestMapping("/he")
+    @RequestMapping("/deleteUser")
     public void deleteUser(HttpServletRequest request, Model model, User user) {
 
-        userService.deleteUserById(user.getUserId());
+        return;
+    }
+
+    @RequestMapping("/my_login")
+    public String showUser(HttpServletRequest request, Model model, User user) {
+
+        List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
+        List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
+        List<CarOrder> finishedCarOrders = carOrderService.getCarOrdersByState(2);
+
+
+        List<StopOrder> unfinishedStopOrders = stopOrderService.getAllUnfinishedStopOrders();
+        List<StopOrder> finishedStopOrders = stopOrderService.getAllFinishedStopOrders();
+
+        List<News> news = newsService.getAllNews();
+
+        List<User> users = userService.getAllUsers();
+
+        model.addAttribute("user", user);
+        model.addAttribute("users", users);
+        model.addAttribute("news", news);
+        model.addAttribute("unfinishedStopOrders", unfinishedStopOrders);
+        model.addAttribute("finishedStopOrders", finishedStopOrders);
+        model.addAttribute("unsolvedCarOrders", unsolvedCarOrders);
+        model.addAttribute("unfinishedCarOrders", unfinishedCarOrders);
+        model.addAttribute("finishedCarOrders", finishedCarOrders);
+
+        return "user/userMainPage";
     }
 
 
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
-    @RequestMapping("/haha")
-    public String showUserssss(HttpServletRequest request, Model model,User user){
+    @RequestMapping("/admin_login")
+    public String showAdmin(HttpServletRequest request, Model model, User user) {
 
         List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
         List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
@@ -85,7 +112,7 @@ public class UserController {
         model.addAttribute("finishedCarOrders", finishedCarOrders);
 
 
-        return "user/userMainPage";
+        return "admin/adminMainPage";
 
     }
     @RequestMapping("/login")
