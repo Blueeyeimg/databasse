@@ -10,17 +10,6 @@ import java.util.Date;
 
 @Controller
 public class CarOrderController {
-    @Resource
-    private CarOrderService carOrderService;
-    @RequestMapping("/hehe")
-    public String hehe(CarOrder carOrder){
-        carOrder.setDate(new Date());
-        carOrder.setType(1);
-        carOrder.setHasName("jk");
-        carOrderService.addNewCarOrder(carOrder);
-        return "user/userMainPage";
-    }
-
 
 
 }

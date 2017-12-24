@@ -372,6 +372,20 @@
                                 <td>${unsolvedCarOrders.get(0).money}</td>
                                 <td>${unsolvedCarOrders.get(0).description}</td>
                                 <td>${unsolvedCarOrders.get(0).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(0).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(0).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unsolvedCarOrders.get(1).carOrderId}</th>
@@ -381,6 +395,20 @@
                                 <td>${unsolvedCarOrders.get(1).money}</td>
                                 <td>${unsolvedCarOrders.get(1).description}</td>
                                 <td>${unsolvedCarOrders.get(1).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(1).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(1).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="active">
                                 <th scope="row">${unsolvedCarOrders.get(2).carOrderId}</th>
@@ -390,6 +418,20 @@
                                 <td>${unsolvedCarOrders.get(2).money}</td>
                                 <td>${unsolvedCarOrders.get(2).description}</td>
                                 <td>${unsolvedCarOrders.get(2).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(2).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(2).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unsolvedCarOrders.get(3).carOrderId}</th>
@@ -399,6 +441,20 @@
                                 <td>${unsolvedCarOrders.get(3).money}</td>
                                 <td>${unsolvedCarOrders.get(3).description}</td>
                                 <td>${unsolvedCarOrders.get(3).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(3).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(3).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="active">
                                 <th scope="row">${unsolvedCarOrders.get(4).carOrderId}</th>
@@ -408,6 +464,20 @@
                                 <td>${unsolvedCarOrders.get(4).money}</td>
                                 <td>${unsolvedCarOrders.get(4).description}</td>
                                 <td>${unsolvedCarOrders.get(4).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(4).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(4).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unsolvedCarOrders.get(5).carOrderId}</th>
@@ -417,6 +487,20 @@
                                 <td>${unsolvedCarOrders.get(5).money}</td>
                                 <td>${unsolvedCarOrders.get(5).description}</td>
                                 <td>${unsolvedCarOrders.get(5).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(5).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(5).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="active">
                                 <th scope="row">${unsolvedCarOrders.get(6).carOrderId}</th>
@@ -426,6 +510,20 @@
                                 <td>${unsolvedCarOrders.get(6).money}</td>
                                 <td>${unsolvedCarOrders.get(6).description}</td>
                                 <td>${unsolvedCarOrders.get(6).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(6).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(6).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unsolvedCarOrders.get(7).carOrderId}</th>
@@ -435,6 +533,20 @@
                                 <td>${unsolvedCarOrders.get(7).money}</td>
                                 <td>${unsolvedCarOrders.get(7).description}</td>
                                 <td>${unsolvedCarOrders.get(7).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(7).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(7).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="active">
                                 <th scope="row">${unsolvedCarOrders.get(8).carOrderId}</th>
@@ -444,6 +556,20 @@
                                 <td>${unsolvedCarOrders.get(8).money}</td>
                                 <td>${unsolvedCarOrders.get(8).description}</td>
                                 <td>${unsolvedCarOrders.get(8).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal01"
+                                            onclick="pass(${unsolvedCarOrders.get(8).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal02"
+                                            onclick="pass(${unsolvedCarOrders.get(8).carOrderId})">
+                                        通过
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -472,6 +598,20 @@
                                 <td>${unfinishedCarOrders.get(0).money}</td>
                                 <td>${unfinishedCarOrders.get(0).description}</td>
                                 <td>${unfinishedCarOrders.get(0).date}</td>
+                                <td>
+                                    <a role="button" class="btn btn-primary" data-toggle="modal"
+                                       data-target="#myModal11"
+                                       onclick="change_car(${unfinishedCarOrders.get(0).carOrderId})">
+                                        删除
+                                    </a>
+                                </td>
+                                <td>
+                                    <a role="button" class="btn btn-success" data-toggle="modal"
+                                       data-target="#myModal12"
+                                       onclick="change_car(${unfinishedCarOrders.get(0).carOrderId})">
+                                        修改
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unfinishedCarOrders.get(1).carOrderId}</th>
@@ -481,6 +621,20 @@
                                 <td>${unfinishedCarOrders.get(1).money}</td>
                                 <td>${unfinishedCarOrders.get(1).description}</td>
                                 <td>${unfinishedCarOrders.get(1).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${unfinishedCarOrders.get(1).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${unfinishedCarOrders.get(1).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="success">
                                 <th scope="row">${unfinishedCarOrders.get(2).carOrderId}</th>
@@ -490,6 +644,20 @@
                                 <td>${unfinishedCarOrders.get(2).money}</td>
                                 <td>${unfinishedCarOrders.get(2).description}</td>
                                 <td>${unfinishedCarOrders.get(2).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${unfinishedCarOrders.get(2).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${unfinishedCarOrders.get(2).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unfinishedCarOrders.get(3).carOrderId}</th>
@@ -499,6 +667,20 @@
                                 <td>${unfinishedCarOrders.get(3).money}</td>
                                 <td>${unfinishedCarOrders.get(3).description}</td>
                                 <td>${unfinishedCarOrders.get(3).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${unfinishedCarOrders.get(3).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${unfinishedCarOrders.get(3).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="success">
                                 <th scope="row">${unfinishedCarOrders.get(4).carOrderId}</th>
@@ -508,6 +690,28 @@
                                 <td>${unfinishedCarOrders.get(4).money}</td>
                                 <td>${unfinishedCarOrders.get(4).description}</td>
                                 <td>${unfinishedCarOrders.get(4).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${unfinishedCarOrders.get(4).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${unfinishedCarOrders.get(4).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal13">
+                                        新增
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -538,6 +742,20 @@
                                 <td>${finishedCarOrders.get(0).money}</td>
                                 <td>${finishedCarOrders.get(0).description}</td>
                                 <td>${finishedCarOrders.get(0).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${finishedCarOrders.get(0).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${finishedCarOrders.get(0).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${finishedCarOrders.get(1).carOrderId}</th>
@@ -548,6 +766,20 @@
                                 <td>${finishedCarOrders.get(1).money}</td>
                                 <td>${finishedCarOrders.get(1).description}</td>
                                 <td>${finishedCarOrders.get(1).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${finishedCarOrders.get(1).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${finishedCarOrders.get(1).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="warning">
                                 <th scope="row">${finishedCarOrders.get(2).carOrderId}</th>
@@ -558,6 +790,20 @@
                                 <td>${finishedCarOrders.get(2).money}</td>
                                 <td>${finishedCarOrders.get(2).description}</td>
                                 <td>${finishedCarOrders.get(2).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${finishedCarOrders.get(2).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${finishedCarOrders.get(2).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${finishedCarOrders.get(3).carOrderId}</th>
@@ -568,6 +814,20 @@
                                 <td>${finishedCarOrders.get(3).money}</td>
                                 <td>${finishedCarOrders.get(3).description}</td>
                                 <td>${finishedCarOrders.get(3).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${finishedCarOrders.get(3).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${finishedCarOrders.get(3).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="warning">
                                 <th scope="row">${finishedCarOrders.get(4).carOrderId}</th>
@@ -578,6 +838,28 @@
                                 <td>${finishedCarOrders.get(4).money}</td>
                                 <td>${finishedCarOrders.get(4).description}</td>
                                 <td>${finishedCarOrders.get(4).date}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal11"
+                                            onclick="change_car(${finishedCarOrders.get(4).carOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal12"
+                                            onclick="change_car(${finishedCarOrders.get(4).carOrderId})">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal13">
+                                        新增
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -604,17 +886,36 @@
                                 <td>${users.get(0).telephone}</td>
                                 <td>
                                     <button type="button" class="btn btn-default" data-toggle="modal"
-                                            data-target="#myModal21">
+                                            data-target="#myModal21" onclick="change_user(${users.get(0).userId})">
                                         删除
                                     </button>
                                 </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(0).userId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
+
                             <tr>
                                 <th scope="row">${users.get(1).userId}</th>
                                 <td>${users.get(1).userName}</td>
                                 <td>${users.get(1).isadmin}</td>
                                 <td>${users.get(1).gender}</td>
                                 <td>${users.get(1).telephone}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal2" onclick="change_user(${users.get(1).userId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(1).userId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="info">
                                 <th scope="row">${users.get(2).userId}</th>
@@ -624,8 +925,14 @@
                                 <td>${users.get(2).telephone}</td>
                                 <td>
                                     <button type="button" class="btn btn-default" data-toggle="modal"
-                                            data-target="#myModal23">
+                                            data-target="#myModal2" onclick="change_user(${users.get(2).userId})">
                                         删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(2).userId})">
+                                        修改
                                     </button>
                                 </td>
                             </tr>
@@ -635,6 +942,18 @@
                                 <td>${users.get(3).isadmin}</td>
                                 <td>${users.get(3).gender}</td>
                                 <td>${users.get(3).telephone}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal2" onclick="change_user(${users.get(3).userId})">
+                                        删除
+                                    </button>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(3).userId})">
+                                        修改
+                                    </button>
+                                </td>
+                                </td>
                             </tr>
                             <tr class="info">
                                 <th scope="row">${users.get(4).userId}</th>
@@ -642,7 +961,47 @@
                                 <td>${users.get(4).isadmin}</td>
                                 <td>${users.get(4).gender}</td>
                                 <td>${users.get(4).telephone}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal2" onclick="change_user(${users.get(4).userId})">
+                                        删除
+                                    </button>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(4).userId})">
+                                        修改
+                                    </button>
+                                </td>
+                                </td>
                             </tr>
+                            <tr class="info">
+                                <th scope="row">${users.get(5).userId}</th>
+                                <td>${users.get(5).userName}</td>
+                                <td>${users.get(5).isadmin}</td>
+                                <td>${users.get(5).gender}</td>
+                                <td>${users.get(5).telephone}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal2" onclick="change_user(${users.get(5).userId})">
+                                        删除
+                                    </button>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal22" onclick="change_user(${users.get(5).userId})">
+                                        修改
+                                    </button>
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal23">
+                                        新增
+                                    </button>
+                                </td>
+                            </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -664,30 +1023,108 @@
                                 <td>${unfinishedStopOrders.get(0).money}</td>
                                 <td>${unfinishedStopOrders.get(0).address}</td>
                                 <td>${unfinishedStopOrders.get(0).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${unfinishedStopOrders.get(0).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${unfinishedStopOrders.get(0).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unfinishedStopOrders.get(1).stopOrderId}</th>
                                 <td>${unfinishedStopOrders.get(1).money}</td>
                                 <td>${unfinishedStopOrders.get(1).address}</td>
                                 <td>${unfinishedStopOrders.get(1).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${unfinishedStopOrders.get(1).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${unfinishedStopOrders.get(1).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="success">
                                 <th scope="row">${unfinishedStopOrders.get(2).stopOrderId}</th>
                                 <td>${unfinishedStopOrders.get(2).money}</td>
                                 <td>${unfinishedStopOrders.get(2).address}</td>
                                 <td>${unfinishedStopOrders.get(2).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${unfinishedStopOrders.get(2).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${unfinishedStopOrders.get(2).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${unfinishedStopOrders.get(3).stopOrderId}</th>
                                 <td>${unfinishedStopOrders.get(3).money}</td>
                                 <td>${unfinishedStopOrders.get(3).address}</td>
                                 <td>${unfinishedStopOrders.get(3).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${unfinishedStopOrders.get(3).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${unfinishedStopOrders.get(3).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="success">
                                 <th scope="row">${unfinishedStopOrders.get(4).stopOrderId}</th>
                                 <td>${unfinishedStopOrders.get(4).money}</td>
                                 <td>${unfinishedStopOrders.get(4).address}</td>
                                 <td>${unfinishedStopOrders.get(4).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${unfinishedStopOrders.get(4).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${unfinishedStopOrders.get(4).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal33">
+                                        新增
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -712,6 +1149,20 @@
                                 <td>${finishedStopOrders.get(0).money}</td>
                                 <td>${finishedStopOrders.get(0).address}</td>
                                 <td>${finishedStopOrders.get(0).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${finishedStopOrders.get(0).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${finishedStopOrders.get(0).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${finishedStopOrders.get(1).stopOrderId}</th>
@@ -719,6 +1170,20 @@
                                 <td>${finishedStopOrders.get(1).money}</td>
                                 <td>${finishedStopOrders.get(1).address}</td>
                                 <td>${finishedStopOrders.get(1).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${finishedStopOrders.get(1).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${finishedStopOrders.get(1).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="warning">
                                 <th scope="row">${finishedStopOrders.get(2).stopOrderId}</th>
@@ -726,6 +1191,20 @@
                                 <td>${finishedStopOrders.get(2).money}</td>
                                 <td>${finishedStopOrders.get(2).address}</td>
                                 <td>${finishedStopOrders.get(2).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${finishedStopOrders.get(2).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${finishedStopOrders.get(2).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${finishedStopOrders.get(3).stopOrderId}</th>
@@ -733,6 +1212,20 @@
                                 <td>${finishedStopOrders.get(3).money}</td>
                                 <td>${finishedStopOrders.get(3).address}</td>
                                 <td>${finishedStopOrders.get(3).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${finishedStopOrders.get(3).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${finishedStopOrders.get(3).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="warning">
                                 <th scope="row">${finishedStopOrders.get(4).stopOrderId}</th>
@@ -740,6 +1233,28 @@
                                 <td>${finishedStopOrders.get(4).money}</td>
                                 <td>${finishedStopOrders.get(4).address}</td>
                                 <td>${finishedStopOrders.get(4).description}</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal31"
+                                            onclick="change_stop(${finishedStopOrders.get(4).stopOrderId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal32"
+                                            onclick="change_stop(${finishedStopOrders.get(4).stopOrderId})">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal33">
+                                        新增
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -764,6 +1279,18 @@
                                 <td>${news.get(0).text}</td>
                                 <td>${news.get(0).date}</td>
                                 <td><a href="${news.get(0).link}">${news.get(0).link}</a></td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal41" onclick="change_news(${news.get(0).newsId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal42" onclick="change_news(${news.get(0).newsId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${news.get(1).newsId}</th>
@@ -771,6 +1298,18 @@
                                 <td>${news.get(1).text}</td>
                                 <td>${news.get(1).date}</td>
                                 <td><a href="${news.get(1).link}">${news.get(1).link}</a></td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal41" onclick="change_news(${news.get(1).newsId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal42" onclick="change_news(${news.get(1).newsId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="info">
                                 <th scope="row">${news.get(2).newsId}</th>
@@ -778,6 +1317,18 @@
                                 <td>${news.get(2).text}</td>
                                 <td>${news.get(2).date}</td>
                                 <td><a href="${news.get(2).link}">${news.get(2).link}</a></td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal41" onclick="change_news(${news.get(2).newsId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal42" onclick="change_news(${news.get(2).newsId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">${news.get(3).newsId}</th>
@@ -785,6 +1336,18 @@
                                 <td>${news.get(3).text}</td>
                                 <td>${news.get(3).date}</td>
                                 <td><a href="${news.get(3).link}">${news.get(3).link}</a></td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal41" onclick="change_news(${news.get(3).newsId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal42" onclick="change_news(${news.get(3).newsId})">
+                                        修改
+                                    </button>
+                                </td>
                             </tr>
                             <tr class="info">
                                 <th scope="row">${news.get(4).newsId}</th>
@@ -792,6 +1355,26 @@
                                 <td>${news.get(4).text}</td>
                                 <td>${news.get(4).date}</td>
                                 <td><a href="${news.get(4).link}">${news.get(4).link}</a></td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#myModal41" onclick="change_news(${news.get(4).newsId})">
+                                        删除
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal42" onclick="change_news(${news.get(4).newsId})">
+                                        修改
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#myModal43">
+                                        新增
+                                    </button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
@@ -1216,8 +1799,263 @@
                        </div>--%>
 
 
+                        <div class="modal fade" id="myModal01" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel01"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel01">
+                                            注意
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="deleteCar">
+
+                                            <input name="carOrderId" id="pass1" hidden="hidden"/>
+                                            <button type="submit" class="btn btn-primary">
+                                                确认删除
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal02" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel02"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel02">
+                                            注意
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="updateCar">
+
+                                            <input name="carOrderId" id="pass2" hidden="hidden"/>
+                                            <input name="state" hidden="hidden" value="1"/>
+                                            <button type="submit" class="btn btn-success">
+                                                确认通过审核
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal11" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel11"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel11">
+                                            警告
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="deleteCar">
+
+                                            <input name="carOrderId" id="carOrderId1" hidden="hidden"/>
+                                            <button type="submit" class="btn btn-primary">
+                                                确认删除
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal12" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel12"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel12">
+                                            请修改
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="updateCar">
+
+                                            <input name="carOrderId" id="carOrderId2" hidden="hidden"/>
+                                            <div class="form-group">
+                                                <label for="car_type" class="col-sm-2 control-label">订单类型</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_type" name="type"
+                                                           placeholder="请输入修改后的订单类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_state" class="col-sm-2 control-label">状态</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_state" name="state"
+                                                           placeholder="请输入修改后的订单状态">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_hasname" class="col-sm-2 control-label">租出人</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_hasname"
+                                                           name="hasName"
+                                                           placeholder="请输入修改后的租出人">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_getname" class="col-sm-2 control-label">租入人</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_getname"
+                                                           name="getName"
+                                                           placeholder="请输入修改后的租入人">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_money" class="col-sm-2 control-label">月租金</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_money"
+                                                           name="money" placeholder="请输入修改后的月租金">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_cartype" class="col-sm-2 control-label">车辆类型</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_cartype"
+                                                           name="carType"
+                                                           placeholder="请输入修改后的车辆类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_description" class="col-sm-2 control-label">车的描述</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textarea" class="form-control" id="car_description"
+                                                           name="description" placeholder="请输入修改后的描述">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal13" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel13"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel13">
+                                            新增
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="addCar">
+
+                                            <div class="form-group">
+                                                <label for="car_type1" class="col-sm-2 control-label">订单类型</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_type1" name="type"
+                                                           placeholder="请输入订单类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_state1" class="col-sm-2 control-label">状态</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_state1" name="state"
+                                                           placeholder="请输入订单状态">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_hasname1" class="col-sm-2 control-label">租出人</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_hasname1"
+                                                           name="hasName"
+                                                           placeholder="请输入租出人（可选）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_getname1" class="col-sm-2 control-label">租出人</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_getname1"
+                                                           name="getName"
+                                                           placeholder="请输入租入人（可选）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_money1" class="col-sm-2 control-label">月租金</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_money1"
+                                                           name="money" placeholder="请输入月租金">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_cartype1" class="col-sm-2 control-label">车辆类型</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_cartype1"
+                                                           name="carType"
+                                                           placeholder="请输入车辆类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_description1"
+                                                       class="col-sm-2 control-label">车的描述</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textarea" class="form-control" id="car_description1"
+                                                           name="description" placeholder="请输入车辆描述">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
                         <div class="modal fade" id="myModal21" tabindex="-1" role="dialog"
-                             aria-labelledby="myModalLabel2"
+                             aria-labelledby="myModalLabel21"
                              aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -1231,7 +2069,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal" role="form" action="deleteUser">
-                                        <input name="userId" hidden="hidden" value="${users.get(0).userId}"/>
+
+                                        <input name="userId" id="userId1" hidden="hidden"/>
                                         <button type="submit" class="btn btn-primary">
                                             确认删除
                                         </button>
@@ -1245,8 +2084,77 @@
                         </div><!-- /.modal -->
                     </div>
 
+                        <div class="modal fade" id="myModal22" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel22"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel22">
+                                            请修改
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="updateUser">
+
+                                            <input name="userId" id="userId2" hidden="hidden"/>
+                                            <div class="form-group">
+                                                <label for="user_name" class="col-sm-2 control-label">用户姓名</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_name"
+                                                           name="userName"
+                                                           placeholder="请输入修改后的用户姓名">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_password" class="col-sm-2 control-label">密码</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_password"
+                                                           name="password"
+                                                           placeholder="请输入修改后的用户密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="user_isadmin" class="col-sm-2 control-label">是否为管理员</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_isadmin"
+                                                           name="isadmin"
+                                                           placeholder="请输入修改后用户类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_tlephone" class="col-sm-2 control-label">手机号</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_tlephone"
+                                                           name="telephone"
+                                                           placeholder="请输入修改后的手机号">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="user_gender" class="col-sm-2 control-label">性别</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_gender"
+                                                           name="gender" placeholder="请输入修改后的用户性别">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
                         <div class="modal fade" id="myModal23" tabindex="-1" role="dialog"
-                             aria-labelledby="myModalLabel2"
+                             aria-labelledby="myModalLabel23"
                              aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -1255,12 +2163,81 @@
                                             &times;
                                         </button>
                                         <h4 class="modal-title" id="myModalLabel23">
+                                            新增
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="addUser">
+
+                                            <div class="form-group">
+                                                <label for="user_name1" class="col-sm-2 control-label">用户姓名</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_name1"
+                                                           name="userName"
+                                                           placeholder="请输入用户姓名">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_password1" class="col-sm-2 control-label">密码</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_password1"
+                                                           name="password"
+                                                           placeholder="请输入用户密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="user_isadmin1" class="col-sm-2 control-label">是否为管理员</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_isadmin1"
+                                                           name="isadmin"
+                                                           placeholder="请输入用户类型">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="car_tlephone1" class="col-sm-2 control-label">手机号</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="car_tlephone1"
+                                                           name="telephone"
+                                                           placeholder="请输入手机号">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="user_gender1" class="col-sm-2 control-label">性别</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="user_gender1"
+                                                           name="gender" placeholder="请输入用户性别">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal31" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel31"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel31">
                                             警告
                                         </h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="form-horizontal" role="form" action="deleteUser">
-                                            <input name="userId" hidden="hidden" value="${users.get(2).userId}"/>
+                                        <form class="form-horizontal" role="form" action="deleteStop">
+
+                                            <input name="stopOrderId" id="stopOrderId1" hidden="hidden"/>
                                             <button type="submit" class="btn btn-primary">
                                                 确认删除
                                             </button>
@@ -1273,6 +2250,282 @@
                                 </div><!-- /.modal-content -->
                             </div><!-- /.modal -->
                         </div>
+
+                        <div class="modal fade" id="myModal32" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel32"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel32">
+                                            请修改
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="updateStop">
+
+                                            <input name="stopOrderId" id="stopOrderId2" hidden="hidden"/>
+                                            <div class="form-group">
+                                                <label for="stop_getName" class="col-sm-2 control-label">租用人</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_getName"
+                                                           name="getName"
+                                                           placeholder="请输入修改后的车位租用人">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="stop_money" class="col-sm-2 control-label">月租金</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_money" name="money"
+                                                           placeholder="请输入修改后的月租金">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="stop_address" class="col-sm-2 control-label">地址</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_address"
+                                                           name="address"
+                                                           placeholder="请输入修改后车位地址">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="stop_description" class="col-sm-2 control-label">描述</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_description"
+                                                           name="description"
+                                                           placeholder="请输入修改后的订单描述">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal33" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel33"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel33">
+                                            新增
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="addStop">
+
+                                            <div class="form-group">
+                                                <label for="stop_money1" class="col-sm-2 control-label">月租金</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_money1"
+                                                           name="money"
+                                                           placeholder="请输入月租金">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="stop_address1" class="col-sm-2 control-label">地址</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_address1"
+                                                           name="address"
+                                                           placeholder="请输入车位地址">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="stop_description1" class="col-sm-2 control-label">描述</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="stop_description1"
+                                                           name="description"
+                                                           placeholder="请输入订单描述">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal41" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel41"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel41">
+                                            警告
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="deleteNews">
+
+                                            <input name="newsId" id="newsId1" hidden="hidden"/>
+                                            <button type="submit" class="btn btn-primary">
+                                                确认删除
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal42" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel42"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel42">
+                                            请修改
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="updateNews">
+
+                                            <input name="newsId" id="newsId2" hidden="hidden"/>
+                                            <div class="form-group">
+                                                <label for="news_title" class="col-sm-2 control-label">标题</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_title" name="title"
+                                                           placeholder="请输入修改后的新闻标题">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="news_text" class="col-sm-2 control-label">文本</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_text" name="text"
+                                                           placeholder="请输入修改后的新闻主要内容">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="news_addess" class="col-sm-2 control-label">详情地址</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_addess" name="link"
+                                                           placeholder="请输入修改后新闻详情地址">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <div class="modal fade" id="myModal43" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel43"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel43">
+                                            新增
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form" action="addNews">
+
+                                            <div class="form-group">
+                                                <label for="news_title1" class="col-sm-2 control-label">标题</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_title1"
+                                                           name="title"
+                                                           placeholder="请输入新闻标题">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="news_text1" class="col-sm-2 control-label">文本</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_text1" name="text"
+                                                           placeholder="请输入新闻主要内容">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="news_addess1" class="col-sm-2 control-label">详情地址</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="news_addess1"
+                                                           name="link"
+                                                           placeholder="请输入新闻详情地址">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">
+                                                确认提交
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                        <%-- <div class="modal fade" id="myModal23" tabindex="-1" role="dialog"
+                              aria-labelledby="myModalLabel2"
+                              aria-hidden="true">
+                             <div class="modal-dialog">
+                                 <div class="modal-content">
+                                     <div class="modal-header">
+                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                             &times;
+                                         </button>
+                                         <h4 class="modal-title" id="myModalLabel23">
+                                             警告
+                                         </h4>
+                                     </div>
+                                     <div class="modal-body">
+                                         <form class="form-horizontal" role="form" action="/deleteUser">
+                                             <input name="userId" hidden="hidden" value="${users.get(2).userId}"/>
+                                             <button type="submit" class="btn btn-primary" id="submit">
+                                                 确认删除
+                                             </button>
+                                         </form>
+                                     </div>
+                                     <div class="modal-footer">
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                         </button>
+                                     </div>
+                                 </div><!-- /.modal-content -->
+                             </div><!-- /.modal -->
+                         </div>--%>
 
 
                 </div>
@@ -1370,10 +2623,36 @@
         }
     }
 
-    function change_news() {
-
-    }
     <%--更改主题--%>
+</script>
+
+<script>
+
+    function pass(id) {
+        document.getElementById("pass1").setAttribute("value", id);
+        document.getElementById("pass2").setAttribute("value", id);
+    }
+
+    function change_car(id) {
+        document.getElementById("carOrderId1").setAttribute("value", id);
+        document.getElementById("carOrderId2").setAttribute("value", id);
+    }
+
+    function change_user(id) {
+        document.getElementById("userId1").setAttribute("value", id);
+        document.getElementById("userId2").setAttribute("value", id);
+    }
+
+    function change_stop(id) {
+        document.getElementById("stopOrderId1").setAttribute("value", id);
+        document.getElementById("stopOrderId2").setAttribute("value", id);
+    }
+
+    function change_news(id) {
+        document.getElementById("newsId1").setAttribute("value", id);
+        document.getElementById("newsId2").setAttribute("value", id);
+    }
+
 </script>
 
 </body>

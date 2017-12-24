@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import javax.enterprise.inject.New;
 import javax.json.Json;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -51,19 +53,100 @@ public class UserController {
         return "showUser";
     }*/
 
-    @RequestMapping("/deleteUser")
-    public void deleteUser(HttpServletRequest request, Model model, User user) {
+    @RequestMapping("/deleteStop")
+    public String updateStop(HttpServletRequest request, Model model, StopOrder order) {
 
-        return;
+        stopOrderService.updateStopOrder(order);
+        return showAdmin(request, model);
     }
 
+    @RequestMapping("/updateStop")
+    public String deleteStop(HttpServletRequest request, Model model, StopOrder order) {
+
+        stopOrderService.deleteStopOrderById(order.getStopOrderId());
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/addStop")
+    public String addStop(HttpServletRequest request, Model model, StopOrder order) {
+
+        stopOrderService.addNewStopOrder(order);
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/updateCar")
+    public String updateCar(HttpServletRequest request, Model model, CarOrder order) {
+
+        carOrderService.updateUnfinishedCarOrder(order);
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/deleteCar")
+    public String deleteCar(HttpServletRequest request, Model model, CarOrder order) {
+
+        carOrderService.deleteCarOrderById(order.getCarOrderId());
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/addCar")
+    public String addCar(HttpServletRequest request, Model model, CarOrder order) {
+
+        order.setDate(new Date());
+        carOrderService.updateUnfinishedCarOrder(order);
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/updateUser")
+    public String updateUser(HttpServletRequest request, Model model, User user) {
+
+
+        return showAdmin(request, model);
+    }
+    @RequestMapping("/deleteUser")
+    public String deleteUser(HttpServletRequest request, Model model, User user) {
+
+        userService.deleteUserById(user.getUserId());
+
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(HttpServletRequest request, Model model, User user) {
+
+        userService.addNewUser(user);
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/updateNews")
+    public String updateNews(HttpServletRequest request, Model model, News news) {
+
+        newsService.updateNews(news);
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/deleteNews")
+    public String deleteNews(HttpServletRequest request, Model model, News news) {
+
+        newsService.deleteNewsById(news.getNewsId());
+
+        return showAdmin(request, model);
+    }
+
+    @RequestMapping("/addNews")
+    public String addNews(HttpServletRequest request, Model model, News news) {
+
+        news.setDate(new Date());
+        newsService.updateNews(news);
+        return showAdmin(request, model);
+    }
+
+
     @RequestMapping("/my_login")
-    public String showUser(HttpServletRequest request, Model model, User user) {
+    public String showUser(HttpServletRequest request, Model model) {
 
         List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
         List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
         List<CarOrder> finishedCarOrders = carOrderService.getCarOrdersByState(2);
-
 
         List<StopOrder> unfinishedStopOrders = stopOrderService.getAllUnfinishedStopOrders();
         List<StopOrder> finishedStopOrders = stopOrderService.getAllFinishedStopOrders();
@@ -72,7 +155,7 @@ public class UserController {
 
         List<User> users = userService.getAllUsers();
 
-        model.addAttribute("user", user);
+
         model.addAttribute("users", users);
         model.addAttribute("news", news);
         model.addAttribute("unfinishedStopOrders", unfinishedStopOrders);
@@ -88,7 +171,7 @@ public class UserController {
 
     //3,自动注入Bean属性----User user https://www.cnblogs.com/chentingk/p/6073963.html
     @RequestMapping("/admin_login")
-    public String showAdmin(HttpServletRequest request, Model model, User user) {
+    public String showAdmin(HttpServletRequest request, Model model) {
 
         List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
         List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
@@ -102,7 +185,7 @@ public class UserController {
 
         List<User> users = userService.getAllUsers();
 
-        model.addAttribute("user", user);
+
         model.addAttribute("users", users);
         model.addAttribute("news", news);
         model.addAttribute("unfinishedStopOrders", unfinishedStopOrders);
