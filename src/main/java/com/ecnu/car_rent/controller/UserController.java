@@ -144,25 +144,16 @@ public class UserController {
     @RequestMapping("/my_login")
     public String showUser(HttpServletRequest request, Model model) {
 
-        List<CarOrder> unsolvedCarOrders = carOrderService.getCarOrdersByState(0);
-        List<CarOrder> unfinishedCarOrders = carOrderService.getCarOrdersByState(1);
-        List<CarOrder> finishedCarOrders = carOrderService.getCarOrdersByState(2);
-
-        List<StopOrder> unfinishedStopOrders = stopOrderService.getAllUnfinishedStopOrders();
-        List<StopOrder> finishedStopOrders = stopOrderService.getAllFinishedStopOrders();
-
+        User uuuu = userService.getUserByName("郑冬");
         List<News> news = newsService.getAllNews();
-
-        List<User> users = userService.getAllUsers();
-
-
-        model.addAttribute("users", users);
-        model.addAttribute("news", news);
-        model.addAttribute("unfinishedStopOrders", unfinishedStopOrders);
-        model.addAttribute("finishedStopOrders", finishedStopOrders);
-        model.addAttribute("unsolvedCarOrders", unsolvedCarOrders);
-        model.addAttribute("unfinishedCarOrders", unfinishedCarOrders);
-        model.addAttribute("finishedCarOrders", finishedCarOrders);
+        List<StopOrder> stopOrders = stopOrderService.getAllStopOrders();
+        List<CarOrder> oders = carOrderService.getAllCarOrders();
+        List<Massage> message = massageService.getAllMassages();
+        model.addAttribute("user",uuuu);
+        model.addAttribute("unsolveorder",oders);//所有的车辆的订单
+        model.addAttribute("messaage",message);
+        model.addAttribute("stopOder",stopOrders);//所有的车位的订单
+        model.addAttribute("news",news);
 
         return "user/userMainPage";
     }
@@ -209,11 +200,16 @@ public class UserController {
         JSONObject json =new JSONObject();
         System.out.print(resUser.getPassword());
         if(password.equals(resUser.getPassword())){//这里没有用数据库验证
+            if(resUser.getIsadmin()==1){
+                json.put("admin","admin");
+            }
+            else json.put("admin","notAdmin");
             json.put("result","success");
-            loginSucced(user);
         }else{
             json.put("result","error");
         }
+
+
         out.print(json);
 
     }
