@@ -129,7 +129,7 @@
                                 <input type="password" id="password" name="userPwd" placeholder="在此键入您的密码..." class="form-password form-control" id="form-password">
                             </div>
                             <div>
-                                <a id="info">f</a>
+                                <a id="info"></a>
                             </div>
                             <button type="submit" class="btn" id="login" >登录</button>
                             <button type="submit" class="btnsma_reg" >注册</button>  <!通过name来区分不同按钮，在haha里面使用类String p=requst.getParameter("name"),并判断p是否为null的方法区分>

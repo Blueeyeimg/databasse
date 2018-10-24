@@ -53,14 +53,14 @@ public class UserController {
         return "showUser";
     }*/
 
-    @RequestMapping("/deleteStop")
+    @RequestMapping("/updateStop")
     public String updateStop(HttpServletRequest request, Model model, StopOrder order) {
 
         stopOrderService.updateStopOrder(order);
         return showAdmin(request, model);
     }
 
-    @RequestMapping("/updateStop")
+    @RequestMapping("/deleteStop")
     public String deleteStop(HttpServletRequest request, Model model, StopOrder order) {
 
         stopOrderService.deleteStopOrderById(order.getStopOrderId());
@@ -77,7 +77,7 @@ public class UserController {
     @RequestMapping("/updateCar")
     public String updateCar(HttpServletRequest request, Model model, CarOrder order) {
 
-        carOrderService.updateUnfinishedCarOrder(order);
+        carOrderService.updateUnfinishedCarOrder(order); 
         return showAdmin(request, model);
     }
 
@@ -92,7 +92,7 @@ public class UserController {
     public String addCar(HttpServletRequest request, Model model, CarOrder order) {
 
         order.setDate(new Date());
-        carOrderService.updateUnfinishedCarOrder(order);
+        carOrderService.addNewCarOrder(order);
         return showAdmin(request, model);
     }
 
